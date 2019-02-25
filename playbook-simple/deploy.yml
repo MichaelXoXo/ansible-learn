@@ -1,0 +1,34 @@
+---
+- hosts: centos
+  vars:
+    httpd_port: 8080
+    max_clients: 200
+  remote_user: root
+  tasks:
+  - name: ensure apache is at the latest version
+    yum: name=httpd state=present
+
+  - name: Write the configuration file
+    template: src=templates/httpd.conf.j2 dest=/etc/httpd/conf/httpd.conf
+    notify:
+    - restart apache
+    ignore_errors: True
+
+  - name: Write the default index.html file
+    template: src=templates/index.html.j2 dest=/var/www/html/index.html
+    ignore_errors: True
+
+  - name: ensure apache is running
+    service: name=httpd state=started
+
+  - name: test copy whether mkdir dir
+    copy:
+      src: ./deploy.yml
+      dest: /tmp/deploy2.yml
+      owner: michael
+      group: michael
+      mode: 0
+
+  handlers:
+    - name: restart apache
+      service: name=httpd state=restarted

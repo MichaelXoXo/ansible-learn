@@ -1,0 +1,6 @@
+[centos]
+192.168.3.43
+[centos:vars]
+ansible_ssh_user=root
+
+

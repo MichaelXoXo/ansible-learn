@@ -1,0 +1,222 @@
+2019-02-25 22:42:08,570 p=75231 u=michael |   [WARNING]: Unable to parse /Users/michael/Code/05-Github-Own/ansible-learn/playbook/inventory as an inventory source
+
+2019-02-25 22:42:08,570 p=75231 u=michael |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-02-25 22:42:08,572 p=75231 u=michael |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match
+'all'
+
+2019-02-25 22:42:08,795 p=75231 u=michael |   [WARNING]: Could not match supplied host pattern, ignoring: centos
+
+2019-02-25 22:42:08,806 p=75231 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 22:42:08,806 p=75231 u=michael |  skipping: no hosts matched
+2019-02-25 22:42:08,806 p=75231 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 22:43:50,724 p=75328 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 22:43:50,739 p=75328 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 22:44:04,670 p=75328 u=michael |  ok: [192.168.3.43]
+2019-02-25 22:44:04,688 p=75328 u=michael |  TASK [ensure apache is at the latest version] **************************************************************************
+2019-02-25 22:48:14,434 p=75328 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": true, "msg": "http://mirrors.cloud.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: [Errno -1] Package does not match intended download. Suggestion: run yum --enablerepo=base clean metadata\nTrying other mirror.\nhttp://mirrors.aliyun.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: [Errno -1] Package does not match intended download. Suggestion: run yum --enablerepo=base clean metadata\nTrying other mirror.\nhttp://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: [Errno 12] Timeout on http://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: (28, 'Connection timed out after 30001 milliseconds')\nTrying other mirror.\nhttp://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: [Errno 12] Timeout on http://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: (28, 'Connection timed out after 30000 milliseconds')\nTrying other mirror.\nhttp://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: [Errno 12] Timeout on http://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: (28, 'Connection timed out after 30001 milliseconds')\nTrying other mirror.\nhttp://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: [Errno 12] Timeout on http://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: (28, 'Connection timed out after 30001 milliseconds')\nTrying other mirror.\nhttp://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: [Errno 12] Timeout on http://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: (28, 'Connection timed out after 30001 milliseconds')\nTrying other mirror.\nhttp://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: [Errno 12] Timeout on http://mirrors.aliyuncs.com/centos/7/os/x86_64/Packages/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm: (28, 'Connection timed out after 30001 milliseconds')\nTrying other mirror.\n\n\nError downloading packages:\n  httpd-tools-2.4.6-88.el7.centos.x86_64: [Errno 256] No more mirrors to try.\n\n", "obsoletes": {"caribou": {"dist": "x86_64", "repo": "@anaconda", "version": "0.4.21-1.el7"}, "caribou-gtk2-module": {"dist": "x86_64", "repo": "@anaconda", "version": "0.4.21-1.el7"}, "caribou-gtk3-module": {"dist": "x86_64", "repo": "@anaconda", "version": "0.4.21-1.el7"}, "gnome-dictionary-libs": {"dist": "x86_64", "repo": "@anaconda", "version": "3.20.0-1.el7"}, "gnome-tweak-tool": {"dist": "noarch", "repo": "@updates", "version": "3.22.0-2.el7_5"}, "grub2": {"dist": "x86_64", "repo": "@anaconda", "version": "1:2.02-0.65.el7.centos.2"}, "grub2-tools": {"dist": "x86_64", "repo": "@anaconda", "version": "1:2.02-0.65.el7.centos.2"}, "mesa-libwayland-egl": {"dist": "x86_64", "repo": "@anaconda", "version": "17.2.3-8.20171019.el7"}, "pyatspi": {"dist": "noarch", "repo": "@anaconda", "version": "2.20.3-1.el7"}, "python2-caribou": {"dist": "noarch", "repo": "@anaconda", "version": "0.4.21-1.el7"}}, "rc": 1, "results": ["Loaded plugins: fastestmirror, langpacks\nLoading mirror speeds from cached hostfile\n * base: mirrors.cloud.aliyuncs.com\n * extras: mirrors.cloud.aliyuncs.com\n * updates: mirrors.cloud.aliyuncs.com\nResolving Dependencies\n--> Running transaction check\n---> Package httpd.x86_64 0:2.4.6-80.el7.centos.1 will be updated\n---> Package httpd.x86_64 0:2.4.6-88.el7.centos will be an update\n--> Processing Dependency: httpd-tools = 2.4.6-88.el7.centos for package: httpd-2.4.6-88.el7.centos.x86_64\n--> Running transaction check\n---> Package httpd-tools.x86_64 0:2.4.6-80.el7.centos.1 will be updated\n---> Package httpd-tools.x86_64 0:2.4.6-88.el7.centos will be an update\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package            Arch          Version                     Repository   Size\n================================================================================\nUpdating:\n httpd              x86_64        2.4.6-88.el7.centos         base        2.7 M\nUpdating for dependencies:\n httpd-tools        x86_64        2.4.6-88.el7.centos         base         90 k\n\nTransaction Summary\n================================================================================\nUpgrade  1 Package (+1 Dependent package)\n\nTotal download size: 2.8 M\nDownloading packages:\nNo Presto metadata available for base\n"]}
+2019-02-25 22:48:14,436 p=75328 u=michael |  	to retry, use: --limit @/Users/michael/Code/05-Github-Own/ansible-learn/playbook/deploy.retry
+
+2019-02-25 22:48:14,437 p=75328 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 22:48:14,437 p=75328 u=michael |  192.168.3.43               : ok=1    changed=0    unreachable=0    failed=1
+2019-02-25 22:52:50,573 p=75675 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 22:52:50,586 p=75675 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 22:53:19,075 p=75675 u=michael |  ok: [192.168.3.43]
+2019-02-25 22:53:19,092 p=75675 u=michael |  TASK [ensure apache is at the latest version] **************************************************************************
+2019-02-25 22:53:38,487 p=75675 u=michael |  changed: [192.168.3.43]
+2019-02-25 22:53:38,506 p=75675 u=michael |  TASK [Write the configuration file] ************************************************************************************
+2019-02-25 22:53:38,986 p=75675 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/httpd.conf.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 22:53:38,986 p=75675 u=michael |  ...ignoring
+2019-02-25 22:53:39,003 p=75675 u=michael |  TASK [Write the default index.html file] *******************************************************************************
+2019-02-25 22:53:39,286 p=75675 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/index.html.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 22:53:39,286 p=75675 u=michael |  ...ignoring
+2019-02-25 22:53:39,305 p=75675 u=michael |  TASK [ensure apache is running] ****************************************************************************************
+2019-02-25 22:53:41,279 p=75675 u=michael |  changed: [192.168.3.43]
+2019-02-25 22:53:41,282 p=75675 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 22:53:41,282 p=75675 u=michael |  192.168.3.43               : ok=5    changed=2    unreachable=0    failed=0   
+2019-02-25 23:10:05,776 p=76495 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 23:10:05,791 p=76495 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 23:10:18,343 p=76495 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:10:18,361 p=76495 u=michael |  TASK [ensure apache is at the latest version] **************************************************************************
+2019-02-25 23:10:29,833 p=76495 u=michael |  changed: [192.168.3.43]
+2019-02-25 23:10:29,851 p=76495 u=michael |  TASK [Write the configuration file] ************************************************************************************
+2019-02-25 23:10:30,158 p=76495 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/httpd.conf.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:10:30,158 p=76495 u=michael |  ...ignoring
+2019-02-25 23:10:30,174 p=76495 u=michael |  TASK [Write the default index.html file] *******************************************************************************
+2019-02-25 23:10:31,262 p=76495 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/index.html.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:10:31,263 p=76495 u=michael |  ...ignoring
+2019-02-25 23:10:31,281 p=76495 u=michael |  TASK [ensure apache is running] ****************************************************************************************
+2019-02-25 23:10:33,143 p=76495 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find the requested service httpd: host"}
+2019-02-25 23:10:33,146 p=76495 u=michael |  	to retry, use: --limit @/Users/michael/Code/05-Github-Own/ansible-learn/playbook/deploy.retry
+
+2019-02-25 23:10:33,146 p=76495 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 23:10:33,146 p=76495 u=michael |  192.168.3.43               : ok=4    changed=1    unreachable=0    failed=1   
+2019-02-25 23:11:31,855 p=76658 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 23:11:31,867 p=76658 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 23:12:04,325 p=76658 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:12:04,343 p=76658 u=michael |  TASK [ensure apache is at the latest version] **************************************************************************
+2019-02-25 23:12:36,073 p=76658 u=michael |  changed: [192.168.3.43]
+2019-02-25 23:12:36,090 p=76658 u=michael |  TASK [Write the configuration file] ************************************************************************************
+2019-02-25 23:12:36,424 p=76658 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/httpd.conf.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:12:36,424 p=76658 u=michael |  ...ignoring
+2019-02-25 23:12:36,440 p=76658 u=michael |  TASK [Write the default index.html file] *******************************************************************************
+2019-02-25 23:12:37,525 p=76658 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/index.html.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:12:37,526 p=76658 u=michael |  ...ignoring
+2019-02-25 23:12:37,544 p=76658 u=michael |  TASK [ensure apache is running] ****************************************************************************************
+2019-02-25 23:12:39,454 p=76658 u=michael |  changed: [192.168.3.43]
+2019-02-25 23:12:39,456 p=76658 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 23:12:39,457 p=76658 u=michael |  192.168.3.43               : ok=5    changed=2    unreachable=0    failed=0   
+2019-02-25 23:16:52,563 p=77057 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 23:16:52,576 p=77057 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 23:17:01,261 p=77057 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:17:01,278 p=77057 u=michael |  TASK [ensure apache is at the latest version] **************************************************************************
+2019-02-25 23:17:02,866 p=77057 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:17:02,884 p=77057 u=michael |  TASK [Write the configuration file] ************************************************************************************
+2019-02-25 23:17:03,498 p=77057 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/httpd.conf.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:17:03,498 p=77057 u=michael |  ...ignoring
+2019-02-25 23:17:03,514 p=77057 u=michael |  TASK [Write the default index.html file] *******************************************************************************
+2019-02-25 23:17:04,294 p=77057 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/index.html.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:17:04,295 p=77057 u=michael |  ...ignoring
+2019-02-25 23:17:04,312 p=77057 u=michael |  TASK [ensure apache is running] ****************************************************************************************
+2019-02-25 23:17:09,584 p=77057 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:17:09,603 p=77057 u=michael |  TASK [test copy whether mkdir dir] *************************************************************************************
+2019-02-25 23:17:21,267 p=77057 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "checksum": "8afec81d03f36e4520b1fda6512e03ccd6ab56cb", "msg": "Destination directory /tmp/copy_module does not exist"}
+2019-02-25 23:17:21,269 p=77057 u=michael |  	to retry, use: --limit @/Users/michael/Code/05-Github-Own/ansible-learn/playbook/deploy.retry
+
+2019-02-25 23:17:21,269 p=77057 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 23:17:21,269 p=77057 u=michael |  192.168.3.43               : ok=5    changed=0    unreachable=0    failed=1   
+2019-02-25 23:21:23,802 p=77408 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 23:21:23,814 p=77408 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 23:21:30,306 p=77408 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:21:30,323 p=77408 u=michael |  TASK [ensure apache is at the latest version] **************************************************************************
+2019-02-25 23:21:39,006 p=77408 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:21:39,025 p=77408 u=michael |  TASK [Write the configuration file] ************************************************************************************
+2019-02-25 23:21:39,387 p=77408 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/httpd.conf.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:21:39,388 p=77408 u=michael |  ...ignoring
+2019-02-25 23:21:39,405 p=77408 u=michael |  TASK [Write the default index.html file] *******************************************************************************
+2019-02-25 23:21:39,707 p=77408 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/index.html.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:21:39,708 p=77408 u=michael |  ...ignoring
+2019-02-25 23:21:39,725 p=77408 u=michael |  TASK [ensure apache is running] ****************************************************************************************
+2019-02-25 23:22:03,504 p=77408 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:22:03,521 p=77408 u=michael |  TASK [test copy whether mkdir dir] *************************************************************************************
+2019-02-25 23:22:17,074 p=77408 u=michael |  changed: [192.168.3.43]
+2019-02-25 23:22:17,077 p=77408 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 23:22:17,077 p=77408 u=michael |  192.168.3.43               : ok=6    changed=1    unreachable=0    failed=0   
+2019-02-25 23:23:00,359 p=77569 u=michael |  ERROR! Missing target hosts
+2019-02-25 23:23:13,516 p=77592 u=michael |  192.168.3.43 | FAILED | rc=2 >>
+ls: cannot access deploy*.yml: No such file or directorynon-zero return code
+
+2019-02-25 23:23:29,568 p=77628 u=michael |  192.168.3.43 | FAILED | rc=2 >>
+ls: cannot access deploy*.yml: No such file or directorynon-zero return code
+
+2019-02-25 23:23:42,060 p=77662 u=michael |  192.168.3.43 | CHANGED | rc=0 >>
+-rw-r--r-- 1 michael michael 773 Feb 25 23:22 /tmp/deploy2.yml
+
+2019-02-25 23:24:00,946 p=77700 u=michael |   [WARNING]: Consider using the file module with state=absent rather than running 'rm'.  If you need to use command
+because file is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in
+ansible.cfg to get rid of this message.
+
+2019-02-25 23:24:00,947 p=77700 u=michael |  192.168.3.43 | CHANGED | rc=0 >>
+
+
+2019-02-25 23:24:23,927 p=77743 u=michael |  192.168.3.43 | FAILED | rc=2 >>
+ls: cannot access /tmp/deploy*.yml: No such file or directorynon-zero return code
+
+2019-02-25 23:25:23,786 p=77851 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 23:25:23,795 p=77851 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 23:25:27,347 p=77851 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:25:27,363 p=77851 u=michael |  TASK [ensure apache is at the latest version] **************************************************************************
+2019-02-25 23:25:34,775 p=77851 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:25:34,792 p=77851 u=michael |  TASK [Write the configuration file] ************************************************************************************
+2019-02-25 23:25:35,559 p=77851 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/httpd.conf.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:25:35,560 p=77851 u=michael |  ...ignoring
+2019-02-25 23:25:35,576 p=77851 u=michael |  TASK [Write the default index.html file] *******************************************************************************
+2019-02-25 23:25:36,269 p=77851 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/index.html.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/index.html.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/index.html.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:25:36,270 p=77851 u=michael |  ...ignoring
+2019-02-25 23:25:36,286 p=77851 u=michael |  TASK [ensure apache is running] ****************************************************************************************
+2019-02-25 23:25:45,789 p=77851 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:25:45,806 p=77851 u=michael |  TASK [test copy whether mkdir dir] *************************************************************************************
+2019-02-25 23:26:16,474 p=77851 u=michael |  changed: [192.168.3.43]
+2019-02-25 23:26:16,477 p=77851 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 23:26:16,477 p=77851 u=michael |  192.168.3.43               : ok=6    changed=1    unreachable=0    failed=0   
+2019-02-25 23:34:21,476 p=78434 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 23:34:21,485 p=78434 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 23:34:33,367 p=78434 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:34:33,383 p=78434 u=michael |  TASK [ensure apache is at the latest version] **************************************************************************
+2019-02-25 23:34:35,824 p=78434 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:34:35,842 p=78434 u=michael |  TASK [Write the configuration file] ************************************************************************************
+2019-02-25 23:34:36,205 p=78434 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/httpd.conf.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:34:36,205 p=78434 u=michael |  ...ignoring
+2019-02-25 23:34:36,224 p=78434 u=michael |  TASK [Write the default index.html file] *******************************************************************************
+2019-02-25 23:34:56,383 p=78434 u=michael |  changed: [192.168.3.43]
+2019-02-25 23:34:56,400 p=78434 u=michael |  TASK [ensure apache is running] ****************************************************************************************
+2019-02-25 23:35:09,315 p=78434 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:35:09,333 p=78434 u=michael |  TASK [test copy whether mkdir dir] *************************************************************************************
+2019-02-25 23:35:14,674 p=78434 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:35:14,677 p=78434 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 23:35:14,677 p=78434 u=michael |  192.168.3.43               : ok=6    changed=1    unreachable=0    failed=0   
+2019-02-25 23:37:10,739 p=78712 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 23:37:10,748 p=78712 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 23:37:14,711 p=78712 u=michael |   [ERROR]: User interrupted execution
+
+2019-02-25 23:38:32,138 p=78838 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 23:38:32,146 p=78838 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 23:38:51,716 p=78838 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:38:51,732 p=78838 u=michael |  TASK [ensure apache is at the latest version] **************************************************************************
+2019-02-25 23:38:56,906 p=78838 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:38:56,928 p=78838 u=michael |  TASK [Write the configuration file] ************************************************************************************
+2019-02-25 23:38:57,519 p=78838 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/httpd.conf.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:38:57,520 p=78838 u=michael |  ...ignoring
+2019-02-25 23:38:57,538 p=78838 u=michael |  TASK [Write the default index.html file] *******************************************************************************
+2019-02-25 23:39:15,059 p=78838 u=michael |  changed: [192.168.3.43]
+2019-02-25 23:39:15,076 p=78838 u=michael |  TASK [ensure apache is running] ****************************************************************************************
+2019-02-25 23:39:20,789 p=78838 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:39:20,806 p=78838 u=michael |  TASK [test copy whether mkdir dir] *************************************************************************************
+2019-02-25 23:39:25,249 p=78838 u=michael |  changed: [192.168.3.43]
+2019-02-25 23:39:25,251 p=78838 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 23:39:25,251 p=78838 u=michael |  192.168.3.43               : ok=6    changed=2    unreachable=0    failed=0   
+2019-02-25 23:40:22,889 p=79019 u=michael |  192.168.3.43 | CHANGED | rc=0 >>
+<html>
+<title>Demo</title>
+<body>
+<div class="block" style="height: 99%;">
+    <div class="centered">
+        <h1>#46 Demo</h1>
+        <p>Served by localhost : 192.168.3.43<p>
+    </div>
+</div>
+</body>
+</html>
+
+2019-02-25 23:49:50,248 p=79753 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 23:49:50,258 p=79753 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 23:50:00,313 p=79753 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:50:00,330 p=79753 u=michael |  TASK [ensure apache is at the latest version] **************************************************************************
+2019-02-25 23:50:02,436 p=79753 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:50:02,453 p=79753 u=michael |  TASK [Write the configuration file] ************************************************************************************
+2019-02-25 23:50:02,657 p=79753 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/httpd.conf.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:50:02,657 p=79753 u=michael |  ...ignoring
+2019-02-25 23:50:02,673 p=79753 u=michael |  TASK [Write the default index.html file] *******************************************************************************
+2019-02-25 23:50:04,860 p=79753 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:50:04,877 p=79753 u=michael |  TASK [ensure apache is running] ****************************************************************************************
+2019-02-25 23:50:06,477 p=79753 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:50:06,495 p=79753 u=michael |  TASK [test copy whether mkdir dir] *************************************************************************************
+2019-02-25 23:50:12,596 p=79753 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:50:12,598 p=79753 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 23:50:12,598 p=79753 u=michael |  192.168.3.43               : ok=6    changed=0    unreachable=0    failed=0   
+2019-02-25 23:54:06,481 p=80142 u=michael |  PLAY [centos] **********************************************************************************************************
+2019-02-25 23:54:06,491 p=80142 u=michael |  TASK [Gathering Facts] *************************************************************************************************
+2019-02-25 23:54:11,939 p=80142 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:54:11,957 p=80142 u=michael |  TASK [ensure apache is at the latest version] **************************************************************************
+2019-02-25 23:54:13,785 p=80142 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:54:13,802 p=80142 u=michael |  TASK [Write the configuration file] ************************************************************************************
+2019-02-25 23:54:14,003 p=80142 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/httpd.conf.j2'\nSearched in:\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/templates/httpd.conf.j2\n\t/Users/michael/Code/05-Github-Own/ansible-learn/playbook/templates/httpd.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2019-02-25 23:54:14,003 p=80142 u=michael |  ...ignoring
+2019-02-25 23:54:14,019 p=80142 u=michael |  TASK [Write the default index.html file] *******************************************************************************
+2019-02-25 23:54:16,730 p=80142 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:54:16,747 p=80142 u=michael |  TASK [ensure apache is running] ****************************************************************************************
+2019-02-25 23:54:19,826 p=80142 u=michael |  ok: [192.168.3.43]
+2019-02-25 23:54:19,843 p=80142 u=michael |  TASK [test copy whether mkdir dir] *************************************************************************************
+2019-02-25 23:54:22,830 p=80142 u=michael |  changed: [192.168.3.43]
+2019-02-25 23:54:22,832 p=80142 u=michael |  PLAY RECAP *************************************************************************************************************
+2019-02-25 23:54:22,833 p=80142 u=michael |  192.168.3.43               : ok=6    changed=1    unreachable=0    failed=0   
