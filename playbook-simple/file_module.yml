@@ -1,0 +1,57 @@
+---
+- hosts: centos
+  vars:
+    httpd_port: 80
+    max_clients: 200
+  remote_user: root
+  tasks:
+  - debug:
+      msg: "System {{ inventory_hostname }} has gateway {{ansible_default_ipv4.gateway}}"
+
+  # 拷贝时，不存在路径时，不会自动创建路径
+  - name: test copy whether mkdir dir
+    copy:
+      src: ./demo.txt
+      dest: /tmp/demo.txt
+      owner: michael
+      group: michael
+      mode: 0600
+
+  # 设置权限
+  - name: change owner for file
+    file:
+      path: /tmp/demo.txt
+      owner: root
+      group: root
+      mode: 0644
+
+  # 创建软连接
+  - name: create file soft link
+    file:
+      src: /etc/httpd/
+      dest: /tmp/httpd_link
+      owner: root
+      group: root
+      state: link
+
+  # 删除文件
+  - name: delete deploy.yml in tmp
+    file:
+      path: "/tmp/{{ item }}"
+      state: absent
+    with_items:
+      - ["deploy.yml", "deploy2.yml"]
+
+  # 新建一个文件
+  - name: 新建一个文件
+    file:
+      path: /tmp/new_file_by_ansible.txt
+      state: touch
+      mode: 0644
+
+  # 新建一个文件夹
+  - name: 新建文件夹
+    file:
+      path: /tmp/new_dir_by_ansible
+      state: directory
+      mode: 0755

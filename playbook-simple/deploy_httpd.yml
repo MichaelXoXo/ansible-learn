@@ -1,22 +1,25 @@
 ---
 - hosts: centos
   vars:
-    httpd_port: 8080
+    httpd_port: 80
     max_clients: 200
   remote_user: root
   tasks:
   - name: ensure apache is at the latest version
     yum: name=httpd state=present
 
+  - debug:
+      msg: "System {{ inventory_hostname }} has gateway {{ansible_default_ipv4.gateway}}"
+
   - name: Write the configuration file
-    template: src=templates/httpd.conf.j2 dest=/etc/httpd/conf/httpd.conf
+    template: src=./templates/httpd.conf.j2 dest=/etc/httpd/conf/httpd.conf
     notify:
     - restart apache
-    ignore_errors: True
+    ignore_errors: False
 
   - name: Write the default index.html file
     template: src=templates/index.html.j2 dest=/var/www/html/index.html
-    ignore_errors: True
+    ignore_errors: False
 
   - name: ensure apache is running
     service: name=httpd state=started
@@ -27,7 +30,22 @@
       dest: /tmp/deploy2.yml
       owner: michael
       group: michael
-      mode: 0
+      mode: 0600
+
+  - name: change owner for file
+    file:
+      path: /tmp/deploy2.yml
+      owner: root
+      group: root
+      mode: 0644
+
+  - name: create file soft link
+    file:
+      src: /etc/httpd/
+      dest: /tmp/httpd_link
+      owner: root
+      group: root
+      state: link
 
   handlers:
     - name: restart apache
