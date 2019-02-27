@@ -775,3 +775,150 @@ The offending line appears to be:
 2019-02-26 23:34:57,300 p=61092 u=michael |  changed: [192.168.3.43]
 2019-02-26 23:34:57,303 p=61092 u=michael |  PLAY RECAP *************************************************************************************************************
 2019-02-26 23:34:57,303 p=61092 u=michael |  192.168.3.43               : ok=8    changed=4    unreachable=0    failed=0   
+2019-02-27 22:38:44,024 p=37479 u=michael |  PLAY [centos] *********************************************************************
+2019-02-27 22:38:44,039 p=37479 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-02-27 22:38:46,560 p=37479 u=michael |  ok: [192.168.3.43]
+2019-02-27 22:38:46,577 p=37479 u=michael |  TASK [debug] **********************************************************************
+2019-02-27 22:38:46,617 p=37479 u=michael |  ok: [192.168.3.43] => {
+    "msg": "System 192.168.3.43 has gateway 192.168.3.1"
+}
+2019-02-27 22:38:46,635 p=37479 u=michael |  TASK [test copy whether mkdir dir] ************************************************
+2019-02-27 22:38:50,923 p=37479 u=michael |  changed: [192.168.3.43]
+2019-02-27 22:38:50,939 p=37479 u=michael |  TASK [change owner for file] ******************************************************
+2019-02-27 22:38:53,122 p=37479 u=michael |  changed: [192.168.3.43]
+2019-02-27 22:38:53,140 p=37479 u=michael |  TASK [create file soft link] ******************************************************
+2019-02-27 22:39:02,901 p=37479 u=michael |  ok: [192.168.3.43]
+2019-02-27 22:39:02,918 p=37479 u=michael |  TASK [delete deploy.yml in tmp] ***************************************************
+2019-02-27 22:39:11,194 p=37479 u=michael |  ok: [192.168.3.43] => (item=deploy.yml)
+2019-02-27 22:39:17,439 p=37479 u=michael |  ok: [192.168.3.43] => (item=deploy2.yml)
+2019-02-27 22:39:17,459 p=37479 u=michael |  TASK [新建一个文件] *********************************************************************
+2019-02-27 22:39:22,995 p=37479 u=michael |  changed: [192.168.3.43]
+2019-02-27 22:39:23,012 p=37479 u=michael |  TASK [新建文件夹] **********************************************************************
+2019-02-27 22:39:26,362 p=37479 u=michael |  ok: [192.168.3.43]
+2019-02-27 22:39:26,365 p=37479 u=michael |  PLAY RECAP ************************************************************************
+2019-02-27 22:39:26,365 p=37479 u=michael |  192.168.3.43               : ok=8    changed=3    unreachable=0    failed=0   
+2019-02-27 22:40:15,627 p=37646 u=michael |  ERROR! Syntax Error while loading YAML.
+  found a tab character that violate indentation
+
+The error appears to have been in '/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/yum_module.yml': line 14, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      name: httpd-2.4.6-88.el7
+	  enablerepo: base
+^ here
+There appears to be a tab character at the start of the line.
+
+YAML does not use tabs for formatting. Tabs should be replaced with spaces.
+
+For example:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+#    ^--- there is a tab there.
+
+Should be written as:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+# ^--- all spaces here.
+
+2019-02-27 22:42:43,610 p=37834 u=michael |  ERROR! 'msg' is not a valid attribute for a Task
+
+The error appears to have been in '/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/yum_module.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - debug:
+    ^ here
+
+This error can be suppressed as a warning using the "invalid_task_attribute_failed" configuration
+2019-02-27 22:43:22,529 p=37910 u=michael |  PLAY [centos] *********************************************************************
+2019-02-27 22:43:22,542 p=37910 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-02-27 22:43:28,254 p=37910 u=michael |  ok: [192.168.3.43]
+2019-02-27 22:43:28,272 p=37910 u=michael |  TASK [debug] **********************************************************************
+2019-02-27 22:43:28,313 p=37910 u=michael |  ok: [192.168.3.43] => {
+    "msg": "System 192.168.3.43 has gateway 192.168.3.1"
+}
+2019-02-27 22:43:28,331 p=37910 u=michael |  TASK [install one specific version of Apache] *************************************
+2019-02-27 22:43:34,023 p=37910 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "No package matching 'httpd-2.4.6-88.el7' found available, installed or updated", "rc": 126, "results": ["No package matching 'httpd-2.4.6-88.el7' found available, installed or updated"]}
+2019-02-27 22:43:34,025 p=37910 u=michael |  	to retry, use: --limit @/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/yum_module.retry
+
+2019-02-27 22:43:34,026 p=37910 u=michael |  PLAY RECAP ************************************************************************
+2019-02-27 22:43:34,026 p=37910 u=michael |  192.168.3.43               : ok=2    changed=0    unreachable=0    failed=1   
+2019-02-27 22:44:53,410 p=38065 u=michael |  PLAY [centos] *********************************************************************
+2019-02-27 22:44:53,422 p=38065 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-02-27 22:44:56,364 p=38065 u=michael |  ok: [192.168.3.43]
+2019-02-27 22:44:56,380 p=38065 u=michael |  TASK [debug] **********************************************************************
+2019-02-27 22:44:56,421 p=38065 u=michael |  ok: [192.168.3.43] => {
+    "msg": "System 192.168.3.43 has gateway 192.168.3.1"
+}
+2019-02-27 22:44:56,436 p=38065 u=michael |  TASK [install one specific version of Apache] *************************************
+2019-02-27 22:44:59,065 p=38065 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "No package matching 'httpd-2.4.6-88' found available, installed or updated", "rc": 126, "results": ["No package matching 'httpd-2.4.6-88' found available, installed or updated"]}
+2019-02-27 22:44:59,067 p=38065 u=michael |  	to retry, use: --limit @/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/yum_module.retry
+
+2019-02-27 22:44:59,067 p=38065 u=michael |  PLAY RECAP ************************************************************************
+2019-02-27 22:44:59,067 p=38065 u=michael |  192.168.3.43               : ok=2    changed=0    unreachable=0    failed=1   
+2019-02-27 22:45:44,713 p=38160 u=michael |  PLAY [centos] *********************************************************************
+2019-02-27 22:45:44,722 p=38160 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-02-27 22:45:54,539 p=38160 u=michael |  ok: [192.168.3.43]
+2019-02-27 22:45:54,555 p=38160 u=michael |  TASK [debug] **********************************************************************
+2019-02-27 22:45:54,595 p=38160 u=michael |  ok: [192.168.3.43] => {
+    "msg": "System 192.168.3.43 has gateway 192.168.3.1"
+}
+2019-02-27 22:45:54,610 p=38160 u=michael |  TASK [install one specific version of Apache] *************************************
+2019-02-27 22:45:58,826 p=38160 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "No package matching '2.4.6-88.el7.centos' found available, installed or updated", "rc": 126, "results": ["No package matching '2.4.6-88.el7.centos' found available, installed or updated"]}
+2019-02-27 22:45:58,828 p=38160 u=michael |  	to retry, use: --limit @/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/yum_module.retry
+
+2019-02-27 22:45:58,828 p=38160 u=michael |  PLAY RECAP ************************************************************************
+2019-02-27 22:45:58,828 p=38160 u=michael |  192.168.3.43               : ok=2    changed=0    unreachable=0    failed=1   
+2019-02-27 22:46:03,277 p=38208 u=michael |  Using /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/ansible.cfg as config file
+2019-02-27 22:46:03,285 p=38208 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-02-27 22:46:03,285 p=38208 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet script requirements, check plugin documentation if this is unexpected
+2019-02-27 22:46:03,522 p=38208 u=michael |  PLAY [centos] *********************************************************************
+2019-02-27 22:46:03,532 p=38208 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-02-27 22:46:14,052 p=38208 u=michael |  ok: [192.168.3.43]
+2019-02-27 22:46:14,069 p=38208 u=michael |  TASK [debug] **********************************************************************
+2019-02-27 22:46:14,110 p=38208 u=michael |  ok: [192.168.3.43] => {
+    "msg": "System 192.168.3.43 has gateway 192.168.3.1"
+}
+2019-02-27 22:46:14,126 p=38208 u=michael |  TASK [install one specific version of Apache] *************************************
+2019-02-27 22:46:17,218 p=38208 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "No package matching '2.4.6-88.el7.centos' found available, installed or updated", "rc": 126, "results": ["No package matching '2.4.6-88.el7.centos' found available, installed or updated"]}
+2019-02-27 22:46:17,220 p=38208 u=michael |  	to retry, use: --limit @/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/yum_module.retry
+
+2019-02-27 22:46:17,220 p=38208 u=michael |  PLAY RECAP ************************************************************************
+2019-02-27 22:46:17,220 p=38208 u=michael |  192.168.3.43               : ok=2    changed=0    unreachable=0    failed=1   
+2019-02-27 22:47:16,659 p=38319 u=michael |  Using /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/ansible.cfg as config file
+2019-02-27 22:47:16,667 p=38319 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-02-27 22:47:16,667 p=38319 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet script requirements, check plugin documentation if this is unexpected
+2019-02-27 22:47:16,912 p=38319 u=michael |  PLAY [centos] *********************************************************************
+2019-02-27 22:47:16,921 p=38319 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-02-27 22:47:20,882 p=38319 u=michael |  ok: [192.168.3.43]
+2019-02-27 22:47:20,898 p=38319 u=michael |  TASK [debug] **********************************************************************
+2019-02-27 22:47:20,938 p=38319 u=michael |  ok: [192.168.3.43] => {
+    "msg": "System 192.168.3.43 has gateway 192.168.3.1"
+}
+2019-02-27 22:47:20,953 p=38319 u=michael |  TASK [install one specific version of Apache] *************************************
+2019-02-27 22:47:32,696 p=38319 u=michael |  changed: [192.168.3.43] => {"changed": true, "msg": "", "rc": 0, "results": ["Loaded plugins: fastestmirror, langpacks\nLoading mirror speeds from cached hostfile\n * base: mirrors.cloud.aliyuncs.com\n * extras: mirrors.cloud.aliyuncs.com\n * updates: mirrors.cloud.aliyuncs.com\nResolving Dependencies\n--> Running transaction check\n---> Package httpd.x86_64 0:2.4.6-88.el7.centos will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package       Arch           Version                        Repository    Size\n================================================================================\nInstalling:\n httpd         x86_64         2.4.6-88.el7.centos            base         2.7 M\n\nTransaction Summary\n================================================================================\nInstall  1 Package\n\nTotal download size: 2.7 M\nInstalled size: 9.4 M\nDownloading packages:\nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : httpd-2.4.6-88.el7.centos.x86_64                             1/1 \n  Verifying  : httpd-2.4.6-88.el7.centos.x86_64                             1/1 \n\nInstalled:\n  httpd.x86_64 0:2.4.6-88.el7.centos                                            \n\nComplete!\n"]}
+2019-02-27 22:47:32,699 p=38319 u=michael |  PLAY RECAP ************************************************************************
+2019-02-27 22:47:32,699 p=38319 u=michael |  192.168.3.43               : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-27 22:53:41,895 p=38800 u=michael |  Using /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/ansible.cfg as config file
+2019-02-27 22:53:41,904 p=38800 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-02-27 22:53:41,904 p=38800 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet script requirements, check plugin documentation if this is unexpected
+2019-02-27 22:53:42,150 p=38800 u=michael |  PLAY [centos] *********************************************************************
+2019-02-27 22:53:42,160 p=38800 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-02-27 22:53:50,267 p=38800 u=michael |  ok: [192.168.3.43]
+2019-02-27 22:53:50,284 p=38800 u=michael |  TASK [debug] **********************************************************************
+2019-02-27 22:53:50,325 p=38800 u=michael |  ok: [192.168.3.43] => {
+    "msg": "System 192.168.3.43 has gateway 192.168.3.1"
+}
+2019-02-27 22:53:50,341 p=38800 u=michael |  TASK [install one specific version of Apache] *************************************
+2019-02-27 22:53:58,319 p=38800 u=michael |  ok: [192.168.3.43] => {"changed": false, "msg": "", "rc": 0, "results": ["httpd-2.4.6-88.el7.centos.x86_64 providing httpd-2.4.6-88.el7.centos is already installed"]}
+2019-02-27 22:53:58,335 p=38800 u=michael |  TASK [install nginx from a local file] ********************************************
+2019-02-27 22:54:01,579 p=38800 u=michael |  fatal: [192.168.3.43]: FAILED! => {"changed": false, "msg": "No RPM file matching '/usr/local/src/nginx-release-centos-6-0.el6.ngx.noarch.rpm' found on system", "rc": 127, "results": ["No RPM file matching '/usr/local/src/nginx-release-centos-6-0.el6.ngx.noarch.rpm' found on system"]}
+2019-02-27 22:54:01,580 p=38800 u=michael |  ...ignoring
+2019-02-27 22:54:01,582 p=38800 u=michael |  PLAY RECAP ************************************************************************
+2019-02-27 22:54:01,582 p=38800 u=michael |  192.168.3.43               : ok=4    changed=0    unreachable=0    failed=0   
