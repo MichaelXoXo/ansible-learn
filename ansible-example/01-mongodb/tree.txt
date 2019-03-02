@@ -1,0 +1,62 @@
+.
+├── LICENSE.md
+├── README.md
+├── group_vars
+│   └── all
+├── hosts
+├── images
+│   ├── check.png
+│   ├── nosql_primer.png
+│   ├── replica_set.png
+│   ├── scale.png
+│   ├── sharding.png
+│   └── site.png
+├── playbooks
+│   └── testsharding.yml
+├── roles
+│   ├── common
+│   │   ├── files
+│   │   │   ├── 10gen.repo.j2
+│   │   │   ├── RPM-GPG-KEY-EPEL-6
+│   │   │   └── epel.repo.j2
+│   │   ├── handlers
+│   │   │   └── main.yml
+│   │   ├── tasks
+│   │   │   └── main.yml
+│   │   └── templates
+│   │       ├── hosts.j2
+│   │       └── iptables.j2
+│   ├── mongoc
+│   │   ├── files
+│   │   │   └── secret
+│   │   ├── tasks
+│   │   │   └── main.yml
+│   │   └── templates
+│   │       ├── adduser.j2
+│   │       ├── mongoc.conf.j2
+│   │       └── mongoc.j2
+│   ├── mongod
+│   │   ├── files
+│   │   │   └── secret
+│   │   ├── tasks
+│   │   │   ├── main.yml
+│   │   │   └── shards.yml
+│   │   └── templates
+│   │       ├── mongod.conf.j2
+│   │       ├── mongod.j2
+│   │       ├── repset_init.j2
+│   │       └── shard_init.j2
+│   └── mongos
+│       ├── files
+│       │   └── secret
+│       ├── tasks
+│       │   └── main.yml
+│       └── templates
+│           ├── enablesharding.j2
+│           ├── mongos.conf.j2
+│           ├── mongos.j2
+│           └── testsharding.j2
+├── site.yml
+└── tree.txt
+
+21 directories, 38 files
