@@ -1,0 +1,18 @@
+---
+- hosts: centos
+  vars:
+    httpd_port: 80
+  vars_files:
+      - ./vars_servers.yml
+  remote_user: root
+  tasks:
+  - debug:
+      msg: "http_port: {{httpd_port}}"
+  - debug:
+      msg: "x86 passwd: {{x86.password}}"
+  - debug:
+      msg: "arm passwd: {{arm.password}}"
+  - debug:
+      msg: "ansible_os_family: {{ansible_os_family}}"
+  - debug:
+      msg: "ansible_distribution: {{ansible_distribution}}"

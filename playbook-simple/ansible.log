@@ -922,3 +922,1484 @@ This error can be suppressed as a warning using the "invalid_task_attribute_fail
 2019-02-27 22:54:01,580 p=38800 u=michael |  ...ignoring
 2019-02-27 22:54:01,582 p=38800 u=michael |  PLAY RECAP ************************************************************************
 2019-02-27 22:54:01,582 p=38800 u=michael |  192.168.3.43               : ok=4    changed=0    unreachable=0    failed=0   
+2019-03-02 10:53:52,486 p=36270 u=michael |  Using /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/ansible.cfg as config file
+2019-03-02 10:53:52,501 p=36270 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-03-02 10:53:52,501 p=36270 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet script requirements, check plugin documentation if this is unexpected
+2019-03-02 10:53:52,807 p=36270 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 10:53:52,825 p=36270 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 10:54:02,889 p=36270 u=michael |  fatal: [192.168.3.43]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.3.43 port 22: Operation timed out", "unreachable": true}
+2019-03-02 10:54:02,892 p=36270 u=michael |  	to retry, use: --limit @/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/vars_demo.retry
+
+2019-03-02 10:54:02,892 p=36270 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 10:54:02,892 p=36270 u=michael |  192.168.3.43               : ok=0    changed=0    unreachable=1    failed=0   
+2019-03-02 10:54:13,041 p=36305 u=michael |  Using /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/ansible.cfg as config file
+2019-03-02 10:54:13,050 p=36305 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-03-02 10:54:13,050 p=36305 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet script requirements, check plugin documentation if this is unexpected
+2019-03-02 10:54:13,200 p=36305 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 10:54:13,224 p=36305 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 10:54:13,280 p=36305 u=michael |  fatal: [192.168.3.43]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.3.43 port 22: Host is down", "unreachable": true}
+2019-03-02 10:54:13,283 p=36305 u=michael |  	to retry, use: --limit @/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/vars_demo.retry
+
+2019-03-02 10:54:13,283 p=36305 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 10:54:13,283 p=36305 u=michael |  192.168.3.43               : ok=0    changed=0    unreachable=1    failed=0   
+2019-03-02 10:54:16,283 p=36323 u=michael |  Using /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/ansible.cfg as config file
+2019-03-02 10:54:16,292 p=36323 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-03-02 10:54:16,292 p=36323 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet script requirements, check plugin documentation if this is unexpected
+2019-03-02 10:54:16,453 p=36323 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 10:54:16,464 p=36323 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 10:54:16,519 p=36323 u=michael |  fatal: [192.168.3.43]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.3.43 port 22: Host is down", "unreachable": true}
+2019-03-02 10:54:16,520 p=36323 u=michael |  	to retry, use: --limit @/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/vars_demo.retry
+
+2019-03-02 10:54:16,521 p=36323 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 10:54:16,521 p=36323 u=michael |  192.168.3.43               : ok=0    changed=0    unreachable=1    failed=0   
+2019-03-02 10:54:17,946 p=36340 u=michael |  Using /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/ansible.cfg as config file
+2019-03-02 10:54:17,955 p=36340 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-03-02 10:54:17,955 p=36340 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet script requirements, check plugin documentation if this is unexpected
+2019-03-02 10:54:18,115 p=36340 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 10:54:18,126 p=36340 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 10:54:32,819 p=36340 u=michael |  ok: [192.168.3.43]
+2019-03-02 10:54:32,836 p=36340 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 10:54:32,859 p=36340 u=michael |  fatal: [192.168.3.43]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'hpptd_port' is undefined\n\nThe error appears to have been in '/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/vars_demo.yml': line 7, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - debug:\n    ^ here\n"}
+2019-03-02 10:54:32,860 p=36340 u=michael |  	to retry, use: --limit @/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/vars_demo.retry
+
+2019-03-02 10:54:32,861 p=36340 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 10:54:32,861 p=36340 u=michael |  192.168.3.43               : ok=1    changed=0    unreachable=0    failed=1   
+2019-03-02 10:55:07,676 p=36425 u=michael |  Using /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/ansible.cfg as config file
+2019-03-02 10:55:07,685 p=36425 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-03-02 10:55:07,685 p=36425 u=michael |  /Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/inventory did not meet script requirements, check plugin documentation if this is unexpected
+2019-03-02 10:55:07,845 p=36425 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 10:55:07,856 p=36425 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 10:55:45,948 p=36425 u=michael |  ok: [192.168.3.43]
+2019-03-02 10:55:45,966 p=36425 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 10:55:46,012 p=36425 u=michael |  ok: [192.168.3.43] => {
+    "msg": "http_port: 80"
+}
+2019-03-02 10:55:46,014 p=36425 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 10:55:46,014 p=36425 u=michael |  192.168.3.43               : ok=2    changed=0    unreachable=0    failed=0   
+2019-03-02 11:00:42,510 p=36873 u=michael |  ERROR! the playbook: vars_demo.yml could not be found
+2019-03-02 11:00:50,409 p=36894 u=michael |   [WARNING]: While constructing a mapping from /Users/michael/Code/05-Github-
+Own/ansible-learn/playbook-simple/vars_learn.yml, line 10, column 7, found a
+duplicate dict key (msg). Using last defined value only.
+
+2019-03-02 11:00:50,656 p=36894 u=michael |  ERROR! vars file ./vars_servers.yml was not found on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2019-03-02 11:01:15,978 p=36953 u=michael |   [WARNING]: While constructing a mapping from /Users/michael/Code/05-Github-
+Own/ansible-learn/playbook-simple/vars_learn.yml, line 10, column 7, found a
+duplicate dict key (msg). Using last defined value only.
+
+2019-03-02 11:01:16,121 p=36953 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 11:01:16,135 p=36953 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 11:01:21,943 p=36953 u=michael |  ok: [192.168.3.43]
+2019-03-02 11:01:21,960 p=36953 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:01:22,001 p=36953 u=michael |  ok: [192.168.3.43] => {
+    "msg": "x86 passwd: 123"
+}
+2019-03-02 11:01:22,003 p=36953 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 11:01:22,003 p=36953 u=michael |  192.168.3.43               : ok=2    changed=0    unreachable=0    failed=0   
+2019-03-02 11:01:56,262 p=37030 u=michael |   [WARNING]: While constructing a mapping from /Users/michael/Code/05-Github-
+Own/ansible-learn/playbook-simple/vars_learn.yml, line 10, column 7, found a
+duplicate dict key (msg). Using last defined value only.
+
+2019-03-02 11:01:56,405 p=37030 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 11:01:56,416 p=37030 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 11:02:09,552 p=37030 u=michael |  ok: [192.168.3.43]
+2019-03-02 11:02:09,568 p=37030 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:02:09,610 p=37030 u=michael |  ok: [192.168.3.43] => {
+    "msg": "arm passwd: 456"
+}
+2019-03-02 11:02:09,612 p=37030 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 11:02:09,613 p=37030 u=michael |  192.168.3.43               : ok=2    changed=0    unreachable=0    failed=0   
+2019-03-02 11:02:34,476 p=37103 u=michael |   [WARNING]: While constructing a mapping from /Users/michael/Code/05-Github-
+Own/ansible-learn/playbook-simple/vars_learn.yml, line 10, column 7, found a
+duplicate dict key (msg). Using last defined value only.
+
+2019-03-02 11:02:34,616 p=37103 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 11:02:34,629 p=37103 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 11:02:54,943 p=37103 u=michael |  ok: [192.168.3.43]
+2019-03-02 11:02:54,959 p=37103 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:02:55,000 p=37103 u=michael |  ok: [192.168.3.43] => {
+    "msg": "arm passwd: 456"
+}
+2019-03-02 11:02:55,002 p=37103 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 11:02:55,002 p=37103 u=michael |  192.168.3.43               : ok=2    changed=0    unreachable=0    failed=0   
+2019-03-02 11:04:14,314 p=37232 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 11:04:14,325 p=37232 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 11:04:18,728 p=37232 u=michael |  ok: [192.168.3.43]
+2019-03-02 11:04:18,745 p=37232 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:04:18,785 p=37232 u=michael |  ok: [192.168.3.43] => {
+    "msg": "http_port: 80"
+}
+2019-03-02 11:04:18,800 p=37232 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:04:18,841 p=37232 u=michael |  ok: [192.168.3.43] => {
+    "msg": "x86 passwd: 123"
+}
+2019-03-02 11:04:18,858 p=37232 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:04:18,898 p=37232 u=michael |  ok: [192.168.3.43] => {
+    "msg": "arm passwd: 456"
+}
+2019-03-02 11:04:18,900 p=37232 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 11:04:18,900 p=37232 u=michael |  192.168.3.43               : ok=4    changed=0    unreachable=0    failed=0   
+2019-03-02 11:11:42,490 p=37702 u=michael |  192.168.3.43 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "192.168.122.1",
+            "192.168.3.43"
+        ],
+        "ansible_all_ipv6_addresses": [
+            "fe80::c019:61a3:5b95:dd53"
+        ],
+        "ansible_apparmor": {
+            "status": "disabled"
+        },
+        "ansible_architecture": "x86_64",
+        "ansible_bios_date": "02/11/2011",
+        "ansible_bios_version": "3FCN19WW",
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/vmlinuz-3.10.0-862.14.4.el7.x86_64",
+            "LANG": "zh_CN.UTF-8",
+            "crashkernel": "auto",
+            "quiet": true,
+            "rd.lvm.lv": "centos/swap",
+            "rhgb": true,
+            "ro": true,
+            "root": "/dev/mapper/centos-root"
+        },
+        "ansible_date_time": {
+            "date": "2019-03-02",
+            "day": "02",
+            "epoch": "1551496301",
+            "hour": "11",
+            "iso8601": "2019-03-02T03:11:41Z",
+            "iso8601_basic": "20190302T111141473956",
+            "iso8601_basic_short": "20190302T111141",
+            "iso8601_micro": "2019-03-02T03:11:41.474103Z",
+            "minute": "11",
+            "month": "03",
+            "second": "41",
+            "time": "11:11:41",
+            "tz": "CST",
+            "tz_offset": "+0800",
+            "weekday": "Saturday",
+            "weekday_number": "6",
+            "weeknumber": "08",
+            "year": "2019"
+        },
+        "ansible_default_ipv4": {
+            "address": "192.168.3.43",
+            "alias": "wlp3s0",
+            "broadcast": "192.168.3.255",
+            "gateway": "192.168.3.1",
+            "interface": "wlp3s0",
+            "macaddress": "8c:a9:82:4f:9a:8a",
+            "mtu": 1500,
+            "netmask": "255.255.255.0",
+            "network": "192.168.3.0",
+            "type": "ether"
+        },
+        "ansible_default_ipv6": {},
+        "ansible_device_links": {
+            "ids": {
+                "dm-0": [
+                    "dm-name-centos-root",
+                    "dm-uuid-LVM-ppV5AeFdEQ2j23Vw6TnQquLWKUkKK0RTV7bBxF2efow86EU3z90qdepYpogU3CF7"
+                ],
+                "dm-1": [
+                    "dm-name-centos-swap",
+                    "dm-uuid-LVM-ppV5AeFdEQ2j23Vw6TnQquLWKUkKK0RTRzTHe8NMXTr9VwHhLR90QOdHwQz929bl"
+                ],
+                "dm-2": [
+                    "dm-name-centos-home",
+                    "dm-uuid-LVM-ppV5AeFdEQ2j23Vw6TnQquLWKUkKK0RTd6UrB9eyAIWtlx7SlPvl64NfhgWnJSmW"
+                ],
+                "sda": [
+                    "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W",
+                    "wwn-0x500080d9103aa9b5"
+                ],
+                "sda1": [
+                    "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W-part1",
+                    "wwn-0x500080d9103aa9b5-part1"
+                ],
+                "sda2": [
+                    "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W-part2",
+                    "wwn-0x500080d9103aa9b5-part2"
+                ],
+                "sda3": [
+                    "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W-part3",
+                    "wwn-0x500080d9103aa9b5-part3"
+                ],
+                "sda4": [
+                    "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W-part4",
+                    "wwn-0x500080d9103aa9b5-part4"
+                ],
+                "sda5": [
+                    "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W-part5",
+                    "wwn-0x500080d9103aa9b5-part5"
+                ],
+                "sdb": [
+                    "ata-HITACHI_HTS545050B9A300_110303PBN403M7JREW0E",
+                    "wwn-0x5000cca67be6633e"
+                ],
+                "sdb1": [
+                    "ata-HITACHI_HTS545050B9A300_110303PBN403M7JREW0E-part1",
+                    "wwn-0x5000cca67be6633e-part1"
+                ],
+                "sdb5": [
+                    "ata-HITACHI_HTS545050B9A300_110303PBN403M7JREW0E-part5",
+                    "wwn-0x5000cca67be6633e-part5"
+                ],
+                "sdb6": [
+                    "ata-HITACHI_HTS545050B9A300_110303PBN403M7JREW0E-part6",
+                    "lvm-pv-uuid-EZP1ha-ojin-e7nQ-3R2P-Yb4y-BPYH-GcJGjb",
+                    "wwn-0x5000cca67be6633e-part6"
+                ]
+            },
+            "labels": {
+                "sdb5": [
+                    "本地磁盘"
+                ]
+            },
+            "masters": {
+                "sdb6": [
+                    "dm-0",
+                    "dm-1",
+                    "dm-2"
+                ]
+            },
+            "uuids": {
+                "dm-0": [
+                    "2a2ece2b-b1a1-4781-bfc6-3fae2e6cad31"
+                ],
+                "dm-1": [
+                    "59fe003a-e2ad-4e2e-95c1-7e880eb32c4a"
+                ],
+                "dm-2": [
+                    "9a09075c-2953-454d-8be3-d701e6d8c557"
+                ],
+                "sda1": [
+                    "000E20B1000F17D5"
+                ],
+                "sda3": [
+                    "149481B3948197BE"
+                ],
+                "sda5": [
+                    "951bb1e1-1274-4c1c-9996-9dc851977fd3"
+                ],
+                "sdb5": [
+                    "90804FCD804FB88C"
+                ]
+            }
+        },
+        "ansible_devices": {
+            "dm-0": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [
+                        "dm-name-centos-root",
+                        "dm-uuid-LVM-ppV5AeFdEQ2j23Vw6TnQquLWKUkKK0RTV7bBxF2efow86EU3z90qdepYpogU3CF7"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": [
+                        "2a2ece2b-b1a1-4781-bfc6-3fae2e6cad31"
+                    ]
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "",
+                "sectors": "252256256",
+                "sectorsize": "512",
+                "serial": "110303PBN403M7JREW0E",
+                "size": "120.29 GB",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "dm-1": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [
+                        "dm-name-centos-swap",
+                        "dm-uuid-LVM-ppV5AeFdEQ2j23Vw6TnQquLWKUkKK0RTRzTHe8NMXTr9VwHhLR90QOdHwQz929bl"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": [
+                        "59fe003a-e2ad-4e2e-95c1-7e880eb32c4a"
+                    ]
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "",
+                "sectors": "15630336",
+                "sectorsize": "512",
+                "serial": "110303PBN403M7JREW0E",
+                "size": "7.45 GB",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "dm-2": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [
+                        "dm-name-centos-home",
+                        "dm-uuid-LVM-ppV5AeFdEQ2j23Vw6TnQquLWKUkKK0RTd6UrB9eyAIWtlx7SlPvl64NfhgWnJSmW"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": [
+                        "9a09075c-2953-454d-8be3-d701e6d8c557"
+                    ]
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "",
+                "sectors": "78127104",
+                "sectorsize": "512",
+                "serial": "110303PBN403M7JREW0E",
+                "size": "37.25 GB",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "sda": {
+                "holders": [],
+                "host": "SATA controller: Intel Corporation 6 Series/C200 Series Chipset Family 6 port Mobile SATA AHCI Controller (rev 05)",
+                "links": {
+                    "ids": [
+                        "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W",
+                        "wwn-0x500080d9103aa9b5"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": "TOSHIBA THNSNJ12",
+                "partitions": {
+                    "sda1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W-part1",
+                                "wwn-0x500080d9103aa9b5-part1"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": [
+                                "000E20B1000F17D5"
+                            ]
+                        },
+                        "sectors": "247403329",
+                        "sectorsize": 512,
+                        "size": "117.97 GB",
+                        "start": "2048",
+                        "uuid": "000E20B1000F17D5"
+                    },
+                    "sda2": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W-part2",
+                                "wwn-0x500080d9103aa9b5-part2"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": []
+                        },
+                        "sectors": "4096",
+                        "sectorsize": 512,
+                        "size": "2.00 MB",
+                        "start": "247406592",
+                        "uuid": null
+                    },
+                    "sda3": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W-part3",
+                                "wwn-0x500080d9103aa9b5-part3"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": [
+                                "149481B3948197BE"
+                            ]
+                        },
+                        "sectors": "1636352",
+                        "sectorsize": 512,
+                        "size": "799.00 MB",
+                        "start": "248430592",
+                        "uuid": "149481B3948197BE"
+                    },
+                    "sda4": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W-part4",
+                                "wwn-0x500080d9103aa9b5-part4"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": []
+                        },
+                        "sectors": "2",
+                        "sectorsize": 512,
+                        "size": "1.00 KB",
+                        "start": "247410688",
+                        "uuid": null
+                    },
+                    "sda5": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-TOSHIBA_THNSNJ128GCSU_553S10F1TB3W-part5",
+                                "wwn-0x500080d9103aa9b5-part5"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": [
+                                "951bb1e1-1274-4c1c-9996-9dc851977fd3"
+                            ]
+                        },
+                        "sectors": "921600",
+                        "sectorsize": 512,
+                        "size": "450.00 MB",
+                        "start": "247412736",
+                        "uuid": "951bb1e1-1274-4c1c-9996-9dc851977fd3"
+                    }
+                },
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "deadline",
+                "sectors": "250069680",
+                "sectorsize": "512",
+                "serial": "553S10F1TB3W",
+                "size": "119.24 GB",
+                "support_discard": "512",
+                "vendor": "ATA",
+                "virtual": 1,
+                "wwn": "0x500080d9103aa9b5"
+            },
+            "sdb": {
+                "holders": [],
+                "host": "SATA controller: Intel Corporation 6 Series/C200 Series Chipset Family 6 port Mobile SATA AHCI Controller (rev 05)",
+                "links": {
+                    "ids": [
+                        "ata-HITACHI_HTS545050B9A300_110303PBN403M7JREW0E",
+                        "wwn-0x5000cca67be6633e"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": "HITACHI HTS54505",
+                "partitions": {
+                    "sdb1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-HITACHI_HTS545050B9A300_110303PBN403M7JREW0E-part1",
+                                "wwn-0x5000cca67be6633e-part1"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": []
+                        },
+                        "sectors": "2",
+                        "sectorsize": 512,
+                        "size": "1.00 KB",
+                        "start": "1",
+                        "uuid": null
+                    },
+                    "sdb5": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-HITACHI_HTS545050B9A300_110303PBN403M7JREW0E-part5",
+                                "wwn-0x5000cca67be6633e-part5"
+                            ],
+                            "labels": [
+                                "本地磁盘"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "90804FCD804FB88C"
+                            ]
+                        },
+                        "sectors": "630738944",
+                        "sectorsize": 512,
+                        "size": "300.76 GB",
+                        "start": "64",
+                        "uuid": "90804FCD804FB88C"
+                    },
+                    "sdb6": {
+                        "holders": [
+                            "centos-root",
+                            "centos-swap",
+                            "centos-home"
+                        ],
+                        "links": {
+                            "ids": [
+                                "ata-HITACHI_HTS545050B9A300_110303PBN403M7JREW0E-part6",
+                                "lvm-pv-uuid-EZP1ha-ojin-e7nQ-3R2P-Yb4y-BPYH-GcJGjb",
+                                "wwn-0x5000cca67be6633e-part6"
+                            ],
+                            "labels": [],
+                            "masters": [
+                                "dm-0",
+                                "dm-1",
+                                "dm-2"
+                            ],
+                            "uuids": []
+                        },
+                        "sectors": "346030080",
+                        "sectorsize": 512,
+                        "size": "165.00 GB",
+                        "start": "630743040",
+                        "uuid": null
+                    }
+                },
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "deadline",
+                "sectors": "976773168",
+                "sectorsize": "512",
+                "serial": "110303PBN403M7JREW0E",
+                "size": "465.76 GB",
+                "support_discard": "0",
+                "vendor": "ATA",
+                "virtual": 1,
+                "wwn": "0x5000cca67be6633e"
+            }
+        },
+        "ansible_distribution": "CentOS",
+        "ansible_distribution_file_parsed": true,
+        "ansible_distribution_file_path": "/etc/redhat-release",
+        "ansible_distribution_file_variety": "RedHat",
+        "ansible_distribution_major_version": "7",
+        "ansible_distribution_release": "Core",
+        "ansible_distribution_version": "7.5.1804",
+        "ansible_dns": {
+            "nameservers": [
+                "192.168.3.1",
+                "fe80::dac7:71ff:fe8e:f8f4%wlp3s0"
+            ]
+        },
+        "ansible_domain": "localdomain",
+        "ansible_effective_group_id": 0,
+        "ansible_effective_user_id": 0,
+        "ansible_enp5s0": {
+            "active": false,
+            "device": "enp5s0",
+            "features": {
+                "busy_poll": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "netns_local": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on",
+                "rx_fcs": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "on [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "off [fixed]",
+                "tx_checksum_ipv4": "on",
+                "tx_checksum_ipv6": "on",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipip_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_sit_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "off",
+                "tx_tcp_segmentation": "on",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "on [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "udp_fragmentation_offload": "off [fixed]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [
+                "none",
+                "ptp_v1_l4_event",
+                "ptp_v2_l4_event",
+                "ptp_v2_l2_event"
+            ],
+            "macaddress": "60:eb:69:ed:47:f7",
+            "module": "tg3",
+            "mtu": 1500,
+            "pciid": "0000:05:00.0",
+            "promisc": false,
+            "speed": 10,
+            "timestamping": [
+                "tx_software",
+                "rx_software",
+                "software"
+            ],
+            "type": "ether"
+        },
+        "ansible_env": {
+            "HOME": "/root",
+            "LANG": "en_US.UTF-8",
+            "LC_ALL": "en_US.UTF-8",
+            "LC_CTYPE": "zh_CN.UTF-8",
+            "LOGNAME": "root",
+            "MAIL": "/var/mail/root",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin",
+            "PWD": "/root",
+            "SHELL": "/bin/zsh",
+            "SHLVL": "1",
+            "SSH_CLIENT": "192.168.3.66 51604 22",
+            "SSH_CONNECTION": "192.168.3.66 51604 192.168.3.43 22",
+            "SSH_TTY": "/dev/pts/1",
+            "TERM": "xterm-256color",
+            "USER": "root",
+            "XDG_RUNTIME_DIR": "/run/user/0",
+            "XDG_SESSION_ID": "180",
+            "_": "/usr/bin/python"
+        },
+        "ansible_fips": false,
+        "ansible_form_factor": "Notebook",
+        "ansible_fqdn": "localhost.localdomain",
+        "ansible_hostname": "localhost",
+        "ansible_interfaces": [
+            "lo",
+            "virbr0",
+            "enp5s0",
+            "virbr0-nic",
+            "wlp3s0"
+        ],
+        "ansible_is_chroot": false,
+        "ansible_iscsi_iqn": "iqn.1994-05.com.redhat:7f415928841",
+        "ansible_kernel": "3.10.0-862.14.4.el7.x86_64",
+        "ansible_lo": {
+            "active": true,
+            "device": "lo",
+            "features": {
+                "busy_poll": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "on [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "on [fixed]",
+                "tx_checksumming": "on",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipip_segmentation": "off [fixed]",
+                "tx_lockless": "on [fixed]",
+                "tx_nocache_copy": "off [fixed]",
+                "tx_scatter_gather": "on [fixed]",
+                "tx_scatter_gather_fraglist": "on [fixed]",
+                "tx_sctp_segmentation": "on",
+                "tx_sit_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "on",
+                "tx_tcp_segmentation": "on",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "udp_fragmentation_offload": "on",
+                "vlan_challenged": "on [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "127.0.0.1",
+                "broadcast": "host",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0"
+            },
+            "ipv6": [
+                {
+                    "address": "::1",
+                    "prefix": "128",
+                    "scope": "host"
+                }
+            ],
+            "mtu": 65536,
+            "promisc": false,
+            "timestamping": [
+                "rx_software",
+                "software"
+            ],
+            "type": "loopback"
+        },
+        "ansible_local": {},
+        "ansible_lsb": {},
+        "ansible_lvm": {
+            "lvs": {
+                "home": {
+                    "size_g": "37.25",
+                    "vg": "centos"
+                },
+                "root": {
+                    "size_g": "120.29",
+                    "vg": "centos"
+                },
+                "swap": {
+                    "size_g": "7.45",
+                    "vg": "centos"
+                }
+            },
+            "pvs": {
+                "/dev/sdb6": {
+                    "free_g": "0.00",
+                    "size_g": "165.00",
+                    "vg": "centos"
+                }
+            },
+            "vgs": {
+                "centos": {
+                    "free_g": "0.00",
+                    "num_lvs": "3",
+                    "num_pvs": "1",
+                    "size_g": "165.00"
+                }
+            }
+        },
+        "ansible_machine": "x86_64",
+        "ansible_machine_id": "72cccb0e089d48c1a5f82aad1ab70404",
+        "ansible_memfree_mb": 6045,
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 6805,
+                "used": 998
+            },
+            "real": {
+                "free": 6045,
+                "total": 7803,
+                "used": 1758
+            },
+            "swap": {
+                "cached": 0,
+                "free": 7631,
+                "total": 7631,
+                "used": 0
+            }
+        },
+        "ansible_memtotal_mb": 7803,
+        "ansible_mounts": [
+            {
+                "block_available": 29080200,
+                "block_size": 4096,
+                "block_total": 31516636,
+                "block_used": 2436436,
+                "device": "/dev/mapper/centos-root",
+                "fstype": "xfs",
+                "inode_available": 62814558,
+                "inode_total": 63064064,
+                "inode_used": 249506,
+                "mount": "/",
+                "options": "rw,relatime,attr2,inode64,noquota",
+                "size_available": 119112499200,
+                "size_total": 129092141056,
+                "uuid": "2a2ece2b-b1a1-4781-bfc6-3fae2e6cad31"
+            },
+            {
+                "block_available": 58742,
+                "block_size": 4096,
+                "block_total": 114345,
+                "block_used": 55603,
+                "device": "/dev/sda5",
+                "fstype": "xfs",
+                "inode_available": 230066,
+                "inode_total": 230400,
+                "inode_used": 334,
+                "mount": "/boot",
+                "options": "rw,relatime,attr2,inode64,noquota",
+                "size_available": 240607232,
+                "size_total": 468357120,
+                "uuid": "951bb1e1-1274-4c1c-9996-9dc851977fd3"
+            },
+            {
+                "block_available": 9648774,
+                "block_size": 4096,
+                "block_total": 9761120,
+                "block_used": 112346,
+                "device": "/dev/mapper/centos-home",
+                "fstype": "xfs",
+                "inode_available": 19523315,
+                "inode_total": 19531776,
+                "inode_used": 8461,
+                "mount": "/home",
+                "options": "rw,relatime,attr2,inode64,noquota",
+                "size_available": 39521378304,
+                "size_total": 39981547520,
+                "uuid": "9a09075c-2953-454d-8be3-d701e6d8c557"
+            }
+        ],
+        "ansible_nodename": "localhost.localdomain",
+        "ansible_os_family": "RedHat",
+        "ansible_pkg_mgr": "yum",
+        "ansible_processor": [
+            "0",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz",
+            "1",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz",
+            "2",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz",
+            "3",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz"
+        ],
+        "ansible_processor_cores": 2,
+        "ansible_processor_count": 1,
+        "ansible_processor_threads_per_core": 2,
+        "ansible_processor_vcpus": 4,
+        "ansible_product_name": "IdeaPad Y460p",
+        "ansible_product_serial": "QB03019495",
+        "ansible_product_uuid": "362CAE03-00A5-334A-CBB3-203040506099",
+        "ansible_product_version": "Rev 1.0",
+        "ansible_python": {
+            "executable": "/usr/bin/python",
+            "has_sslcontext": true,
+            "type": "CPython",
+            "version": {
+                "major": 2,
+                "micro": 5,
+                "minor": 7,
+                "releaselevel": "final",
+                "serial": 0
+            },
+            "version_info": [
+                2,
+                7,
+                5,
+                "final",
+                0
+            ]
+        },
+        "ansible_python_version": "2.7.5",
+        "ansible_real_group_id": 0,
+        "ansible_real_user_id": 0,
+        "ansible_selinux": {
+            "status": "disabled"
+        },
+        "ansible_selinux_python_present": true,
+        "ansible_service_mgr": "systemd",
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBODVqTSMyVUUxkCBsLyvj+7r4TjHJZeXiiARQgbojjjRN2AS04JN6wTvXVYvVOyWkgaL5Jvv4QZMDEfWPx8bAxA=",
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIHYJtGEyB73gOdlpmx11ppXd8dv1/JtR1gCIhfmINvgW",
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQD59PZMp+FgNhS3PBzjzr+mljigb6EgI0wJUJpBVFIqRzL8129TFSgC6CFE0pYp5dPYNXFb45rK8/s0RfXpZMf7G/cPzcY8ThZEINYo1++SM+ykV8S6TTU0KaPS/AIGE/PMVoarxTGn4uDIE++Vn1k146RseI7I6UoQEVvSJHYSnSZX8tf0zW0QrFlruFPS+mVQ29Tisg7upNzOFCKqx0k2GlxU0ShTn7UxKUnIYC6p4WDocT6O1RgcQq4kTLFGlRlWzjRah4Hz5K791F1sDSHfqKKB0RucEKv00NLxKGp71WwzV9gVDlnBXBQ8FdkGll4w4fAlf/u1YJ3VDxSXNzP/",
+        "ansible_swapfree_mb": 7631,
+        "ansible_swaptotal_mb": 7631,
+        "ansible_system": "Linux",
+        "ansible_system_capabilities": [
+            "cap_chown",
+            "cap_dac_override",
+            "cap_dac_read_search",
+            "cap_fowner",
+            "cap_fsetid",
+            "cap_kill",
+            "cap_setgid",
+            "cap_setuid",
+            "cap_setpcap",
+            "cap_linux_immutable",
+            "cap_net_bind_service",
+            "cap_net_broadcast",
+            "cap_net_admin",
+            "cap_net_raw",
+            "cap_ipc_lock",
+            "cap_ipc_owner",
+            "cap_sys_module",
+            "cap_sys_rawio",
+            "cap_sys_chroot",
+            "cap_sys_ptrace",
+            "cap_sys_pacct",
+            "cap_sys_admin",
+            "cap_sys_boot",
+            "cap_sys_nice",
+            "cap_sys_resource",
+            "cap_sys_time",
+            "cap_sys_tty_config",
+            "cap_mknod",
+            "cap_lease",
+            "cap_audit_write",
+            "cap_audit_control",
+            "cap_setfcap",
+            "cap_mac_override",
+            "cap_mac_admin",
+            "cap_syslog",
+            "35",
+            "36+ep"
+        ],
+        "ansible_system_capabilities_enforced": "True",
+        "ansible_system_vendor": "LENOVO",
+        "ansible_uptime_seconds": 507065,
+        "ansible_user_dir": "/root",
+        "ansible_user_gecos": "root",
+        "ansible_user_gid": 0,
+        "ansible_user_id": "root",
+        "ansible_user_shell": "/bin/zsh",
+        "ansible_user_uid": 0,
+        "ansible_userspace_architecture": "x86_64",
+        "ansible_userspace_bits": "64",
+        "ansible_virbr0": {
+            "active": false,
+            "device": "virbr0",
+            "features": {
+                "busy_poll": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "off [requested on]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "off [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_fcoe_segmentation": "off [requested on]",
+                "tx_gre_csum_segmentation": "on",
+                "tx_gre_segmentation": "on",
+                "tx_gso_partial": "on",
+                "tx_gso_robust": "off [requested on]",
+                "tx_ipip_segmentation": "on",
+                "tx_lockless": "on [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "on",
+                "tx_sctp_segmentation": "off [requested on]",
+                "tx_sit_segmentation": "on",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "on",
+                "tx_tcp_segmentation": "on",
+                "tx_udp_tnl_csum_segmentation": "on",
+                "tx_udp_tnl_segmentation": "on",
+                "tx_vlan_offload": "on",
+                "tx_vlan_stag_hw_insert": "on",
+                "udp_fragmentation_offload": "off [requested on]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "id": "8000.525400bb4c4b",
+            "interfaces": [
+                "virbr0-nic"
+            ],
+            "ipv4": {
+                "address": "192.168.122.1",
+                "broadcast": "192.168.122.255",
+                "netmask": "255.255.255.0",
+                "network": "192.168.122.0"
+            },
+            "macaddress": "52:54:00:bb:4c:4b",
+            "mtu": 1500,
+            "promisc": false,
+            "stp": true,
+            "timestamping": [
+                "rx_software",
+                "software"
+            ],
+            "type": "bridge"
+        },
+        "ansible_virbr0_nic": {
+            "active": false,
+            "device": "virbr0-nic",
+            "features": {
+                "busy_poll": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "netns_local": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "off [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "off",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "off [requested on]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "off",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipip_segmentation": "off [fixed]",
+                "tx_lockless": "on [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "on",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_sit_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "off [requested on]",
+                "tx_tcp_ecn_segmentation": "off [requested on]",
+                "tx_tcp_mangleid_segmentation": "off",
+                "tx_tcp_segmentation": "off [requested on]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "on",
+                "tx_vlan_stag_hw_insert": "on",
+                "udp_fragmentation_offload": "off [requested on]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "macaddress": "52:54:00:bb:4c:4b",
+            "mtu": 1500,
+            "promisc": true,
+            "timestamping": [
+                "rx_software",
+                "software"
+            ],
+            "type": "ether"
+        },
+        "ansible_virtualization_role": "host",
+        "ansible_virtualization_type": "kvm",
+        "ansible_wlp3s0": {
+            "active": true,
+            "device": "wlp3s0",
+            "features": {
+                "busy_poll": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "off [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "off",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "off [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "off",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipip_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on [fixed]",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_sit_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "off [fixed]",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off [fixed]",
+                "tx_tcp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "udp_fragmentation_offload": "off [fixed]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "192.168.3.43",
+                "broadcast": "192.168.3.255",
+                "netmask": "255.255.255.0",
+                "network": "192.168.3.0"
+            },
+            "ipv6": [
+                {
+                    "address": "fe80::c019:61a3:5b95:dd53",
+                    "prefix": "64",
+                    "scope": "link"
+                }
+            ],
+            "macaddress": "8c:a9:82:4f:9a:8a",
+            "module": "iwlwifi",
+            "mtu": 1500,
+            "pciid": "0000:03:00.0",
+            "promisc": false,
+            "timestamping": [
+                "rx_software",
+                "software"
+            ],
+            "type": "ether"
+        },
+        "gather_subset": [
+            "all"
+        ],
+        "module_setup": true
+    },
+    "changed": false
+}
+2019-03-02 11:14:58,312 p=37932 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 11:14:58,326 p=37932 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 11:15:13,665 p=37932 u=michael |  ok: [192.168.3.43]
+2019-03-02 11:15:13,683 p=37932 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:15:13,725 p=37932 u=michael |  ok: [192.168.3.43] => {
+    "msg": "http_port: 80"
+}
+2019-03-02 11:15:13,741 p=37932 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:15:13,784 p=37932 u=michael |  ok: [192.168.3.43] => {
+    "msg": "x86 passwd: 123"
+}
+2019-03-02 11:15:13,800 p=37932 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:15:13,843 p=37932 u=michael |  ok: [192.168.3.43] => {
+    "msg": "arm passwd: 456"
+}
+2019-03-02 11:15:13,859 p=37932 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:15:13,901 p=37932 u=michael |  ok: [192.168.3.43] => {
+    "msg": "ansible_os_family: RedHat"
+}
+2019-03-02 11:15:13,903 p=37932 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 11:15:13,903 p=37932 u=michael |  192.168.3.43               : ok=5    changed=0    unreachable=0    failed=0   
+2019-03-02 11:27:05,131 p=38672 u=michael |  ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to have been in '/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/register_learn.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- host: centos
+  ^ here
+
+2019-03-02 11:27:23,084 p=38714 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 11:27:23,096 p=38714 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 11:27:33,246 p=38714 u=michael |  ok: [192.168.3.43]
+2019-03-02 11:27:33,264 p=38714 u=michael |  TASK [shell] **********************************************************************
+2019-03-02 11:27:35,023 p=38714 u=michael |  changed: [192.168.3.43]
+2019-03-02 11:27:35,039 p=38714 u=michael |  TASK [shell] **********************************************************************
+2019-03-02 11:27:35,059 p=38714 u=michael |  skipping: [192.168.3.43]
+2019-03-02 11:27:35,077 p=38714 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:27:35,121 p=38714 u=michael |  ok: [192.168.3.43] => {
+    "msg": "ansible_command_payload_27P18y\nansible_command_payload_4vdfWO\nansible_command_payload_JXrxEe\nansible_command_payload_Qdmj6E\nansible_yum_payload_27rhSX\ncentos.txt\ndemo.txt\nfile_by_ansible.txt\nfile_mbp.txt\nhttpd_link\nmongodb-27017.sock\nmy-config-files\nnew_dir_by_ansible\nnew_file_by_ansible.txt\nsystemd-private-aa65fe6963654f0fb886c2862deaec2f-chronyd.service-bbRVMQ\nsystemd-private-aa65fe6963654f0fb886c2862deaec2f-colord.service-RWdnQj\nsystemd-private-aa65fe6963654f0fb886c2862deaec2f-cups.service-B6xlkb\nsystemd-private-aa65fe6963654f0fb886c2862deaec2f-rtkit-daemon.service-seTWuQ\ntracker-extract-files.1000\nyum_save_tx.2019-02-24.11-40.mkv8MV.yumtx\nyum_save_tx.2019-02-25.22-45.PUNi2T.yumtx"
+}
+2019-03-02 11:27:35,123 p=38714 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 11:27:35,123 p=38714 u=michael |  192.168.3.43               : ok=3    changed=1    unreachable=0    failed=0   
+2019-03-02 11:28:38,481 p=38837 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 11:28:38,490 p=38837 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 11:28:44,451 p=38837 u=michael |  ok: [192.168.3.43]
+2019-03-02 11:28:44,468 p=38837 u=michael |  TASK [ls /tmp] ********************************************************************
+2019-03-02 11:28:45,832 p=38837 u=michael |  changed: [192.168.3.43]
+2019-03-02 11:28:45,848 p=38837 u=michael |  TASK [echo result when rc==5] *****************************************************
+2019-03-02 11:28:45,869 p=38837 u=michael |  skipping: [192.168.3.43]
+2019-03-02 11:28:45,886 p=38837 u=michael |  TASK [debug show stdout] **********************************************************
+2019-03-02 11:28:45,929 p=38837 u=michael |  ok: [192.168.3.43] => {
+    "msg": "total 24\ndrwx------  2 root    root      80 Feb 26 22:42 ansible_command_payload_27P18y\ndrwx------  2 root    root      80 Feb 24 14:20 ansible_command_payload_4vdfWO\ndrwx------  2 root    root      80 Feb 24 14:17 ansible_command_payload_JXrxEe\ndrwx------  2 root    root      80 Mar  2 11:28 ansible_command_payload_Xvlg9u\ndrwx------  2 root    root      76 Feb 24 11:40 ansible_yum_payload_27rhSX\n-rw-r--r--  1 michael michael    7 Feb 24 11:25 centos.txt\n-rw-r--r--  1 root    root      28 Feb 26 23:09 demo.txt\n-rw-r--r--  1 root    root      14 Feb 24 15:04 file_by_ansible.txt\n-rw-r--r--  1 michael michael    7 Feb 24 11:24 file_mbp.txt\nlrwxrwxrwx  1 root    root      11 Feb 26 22:59 httpd_link -> /etc/httpd/\nsrwx------  1 root    root       0 Feb 24 14:21 mongodb-27017.sock\ndrwxr-xr-x 14 root    root     210 Feb 24 13:22 my-config-files\ndrwxr-xr-x  2 root    root       6 Feb 26 23:34 new_dir_by_ansible\n-rw-r--r--  1 root    root       0 Feb 27 22:39 new_file_by_ansible.txt\ndrwx------  3 root    root      17 Feb 24 14:21 systemd-private-aa65fe6963654f0fb886c2862deaec2f-chronyd.service-bbRVMQ\ndrwx------  3 root    root      17 Feb 24 14:21 systemd-private-aa65fe6963654f0fb886c2862deaec2f-colord.service-RWdnQj\ndrwx------  3 root    root      17 Feb 24 14:21 systemd-private-aa65fe6963654f0fb886c2862deaec2f-cups.service-B6xlkb\ndrwx------  3 root    root      17 Feb 24 14:21 systemd-private-aa65fe6963654f0fb886c2862deaec2f-rtkit-daemon.service-seTWuQ\ndrwx------  2 michael michael    6 Feb 24 10:41 tracker-extract-files.1000\n-rw-------  1 root    root    1671 Feb 24 11:40 yum_save_tx.2019-02-24.11-40.mkv8MV.yumtx\n-rw-------  1 root    root    1249 Feb 25 22:45 yum_save_tx.2019-02-25.22-45.PUNi2T.yumtx"
+}
+2019-03-02 11:28:45,931 p=38837 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 11:28:45,931 p=38837 u=michael |  192.168.3.43               : ok=3    changed=1    unreachable=0    failed=0   
+2019-03-02 11:53:49,540 p=40345 u=michael |  192.168.3.43 | FAILED! => {
+    "msg": "The task includes an option with an undefined variable. The error was: 'ansible_disbugion' is undefined"
+}
+2019-03-02 11:54:08,698 p=40374 u=michael |  192.168.3.43 | FAILED! => {
+    "msg": "The task includes an option with an undefined variable. The error was: 'ansible_distribution' is undefined"
+}
+2019-03-02 11:54:34,622 p=40415 u=michael |  192.168.3.43 | FAILED! => {
+    "msg": "The task includes an option with an undefined variable. The error was: 'ansible_distribution' is undefined"
+}
+2019-03-02 11:55:33,269 p=40498 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 11:55:33,281 p=40498 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 11:55:37,336 p=40498 u=michael |  ok: [192.168.3.43]
+2019-03-02 11:55:37,353 p=40498 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:55:37,394 p=40498 u=michael |  ok: [192.168.3.43] => {
+    "msg": "http_port: 80"
+}
+2019-03-02 11:55:37,410 p=40498 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:55:37,453 p=40498 u=michael |  ok: [192.168.3.43] => {
+    "msg": "x86 passwd: 123"
+}
+2019-03-02 11:55:37,470 p=40498 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:55:37,510 p=40498 u=michael |  ok: [192.168.3.43] => {
+    "msg": "arm passwd: 456"
+}
+2019-03-02 11:55:37,526 p=40498 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:55:37,568 p=40498 u=michael |  ok: [192.168.3.43] => {
+    "msg": "ansible_os_family: RedHat"
+}
+2019-03-02 11:55:37,584 p=40498 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:55:37,625 p=40498 u=michael |  ok: [192.168.3.43] => {
+    "msg": "ansible_os_family: CentOS"
+}
+2019-03-02 11:55:37,627 p=40498 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 11:55:37,627 p=40498 u=michael |  192.168.3.43               : ok=6    changed=0    unreachable=0    failed=0   
+2019-03-02 11:56:18,090 p=40582 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 11:56:18,103 p=40582 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 11:56:27,462 p=40582 u=michael |  ok: [192.168.3.43]
+2019-03-02 11:56:27,481 p=40582 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:56:27,523 p=40582 u=michael |  ok: [192.168.3.43] => {
+    "msg": "http_port: 80"
+}
+2019-03-02 11:56:27,539 p=40582 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:56:27,580 p=40582 u=michael |  ok: [192.168.3.43] => {
+    "msg": "x86 passwd: 123"
+}
+2019-03-02 11:56:27,595 p=40582 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:56:27,633 p=40582 u=michael |  ok: [192.168.3.43] => {
+    "msg": "arm passwd: 456"
+}
+2019-03-02 11:56:27,646 p=40582 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:56:27,685 p=40582 u=michael |  ok: [192.168.3.43] => {
+    "msg": "ansible_os_family: RedHat"
+}
+2019-03-02 11:56:27,700 p=40582 u=michael |  TASK [debug] **********************************************************************
+2019-03-02 11:56:27,741 p=40582 u=michael |  ok: [192.168.3.43] => {
+    "msg": "ansible_distribution: CentOS"
+}
+2019-03-02 11:56:27,743 p=40582 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 11:56:27,743 p=40582 u=michael |  192.168.3.43               : ok=6    changed=0    unreachable=0    failed=0   
+2019-03-02 11:56:46,939 p=40635 u=michael |  192.168.3.43 | SUCCESS => {
+    "msg": "michael"
+}
+2019-03-02 11:56:58,772 p=40660 u=michael |  192.168.3.43 | SUCCESS => {
+    "msg": "ansible_distribution"
+}
+2019-03-02 11:57:13,513 p=40691 u=michael |  192.168.3.43 | FAILED! => {
+    "msg": "The task includes an option with an undefined variable. The error was: 'ansible_distribution' is undefined"
+}
+2019-03-02 15:17:50,407 p=51769 u=michael |  ERROR! Syntax Error while loading YAML.
+  could not find expected ':'
+
+The error appears to have been in '/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/loop_learn.yml': line 16, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+(specified line no longer in file, maybe it changed?)
+2019-03-02 15:19:01,217 p=51861 u=michael |  ERROR! playbooks must be a list of plays
+
+The error appears to have been in '/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/loop_learn.yml': line 2, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+hosts: centos
+^ here
+
+2019-03-02 15:20:15,628 p=51992 u=michael |  playbook: loop_learn.yml
+2019-03-02 15:20:15,628 p=51992 u=michael |    play #1 (centos): centos	TAGS: []
+    pattern: ['centos']
+    hosts (1):
+      192.168.3.43
+2019-03-02 15:20:21,266 p=52009 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 15:20:21,280 p=52009 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 15:20:25,028 p=52009 u=michael |  ok: [192.168.3.43]
+2019-03-02 15:20:25,045 p=52009 u=michael |  TASK [print phone records] ********************************************************
+2019-03-02 15:20:25,097 p=52009 u=michael |  ok: [192.168.3.43] => (item={'key': 'michael', 'value': {'name': 'michael xiang', 'phone': 123}}) => {
+    "msg": "User michael is michael xiang 123"
+}
+2019-03-02 15:20:25,101 p=52009 u=michael |  ok: [192.168.3.43] => (item={'key': 'qq', 'value': {'name': 'qq huang', 'phone': 456}}) => {
+    "msg": "User qq is qq huang 456"
+}
+2019-03-02 15:20:25,105 p=52009 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 15:20:25,106 p=52009 u=michael |  192.168.3.43               : ok=2    changed=0    unreachable=0    failed=0   
+2019-03-02 15:21:08,962 p=52090 u=michael |  PLAY [centos] *********************************************************************
+2019-03-02 15:21:08,972 p=52090 u=michael |  TASK [Gathering Facts] ************************************************************
+2019-03-02 15:21:11,363 p=52090 u=michael |  ok: [192.168.3.43]
+2019-03-02 15:21:11,378 p=52090 u=michael |  TASK [print phone records] ********************************************************
+2019-03-02 15:21:11,423 p=52090 u=michael |  ok: [192.168.3.43] => (item={'key': 'michael', 'value': {'name': 'michael xiang', 'phone': 123}}) => {
+    "msg": "User michael is michael xiang 123"
+}
+2019-03-02 15:21:11,427 p=52090 u=michael |  ok: [192.168.3.43] => (item={'key': 'qq', 'value': {'name': 'qq huang', 'phone': 456}}) => {
+    "msg": "User qq is qq huang 456"
+}
+2019-03-02 15:21:11,430 p=52090 u=michael |  PLAY RECAP ************************************************************************
+2019-03-02 15:21:11,430 p=52090 u=michael |  192.168.3.43               : ok=2    changed=0    unreachable=0    failed=0   
+2019-03-02 15:21:21,321 p=52186 u=michael |  PLAY [centos] ****************************************************************************************************************************
+2019-03-02 15:21:21,333 p=52186 u=michael |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-03-02 15:21:27,036 p=52186 u=michael |  ok: [192.168.3.43]
+2019-03-02 15:21:27,053 p=52186 u=michael |  TASK [print phone records] ***************************************************************************************************************
+2019-03-02 15:21:27,102 p=52186 u=michael |  ok: [192.168.3.43] => (item={'key': 'michael', 'value': {'name': 'michael xiang', 'phone': 123}}) => {
+    "msg": "User michael is michael xiang 123"
+}
+2019-03-02 15:21:27,106 p=52186 u=michael |  ok: [192.168.3.43] => (item={'key': 'qq', 'value': {'name': 'qq huang', 'phone': 456}}) => {
+    "msg": "User qq is qq huang 456"
+}
+2019-03-02 15:21:27,111 p=52186 u=michael |  PLAY RECAP *******************************************************************************************************************************
+2019-03-02 15:21:27,111 p=52186 u=michael |  192.168.3.43               : ok=2    changed=0    unreachable=0    failed=0   
+2019-03-02 15:33:15,953 p=52914 u=michael |  ERROR! Syntax Error while loading YAML.
+  found unacceptable key (unhashable type: 'AnsibleMapping')
+
+The error appears to have been in '/Users/michael/Code/05-Github-Own/ansible-learn/playbook-simple/loop_learn.yml': line 24, column 15, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - name: install rpms
+      debug: {{item}}
+              ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes.  Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2019-03-02 15:34:20,372 p=53003 u=michael |  PLAY [centos] ****************************************************************************************************************************
+2019-03-02 15:34:20,387 p=53003 u=michael |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-03-02 15:34:26,048 p=53003 u=michael |  ok: [192.168.3.43]
+2019-03-02 15:34:26,065 p=53003 u=michael |  TASK [print phone records] ***************************************************************************************************************
+2019-03-02 15:34:26,116 p=53003 u=michael |  ok: [192.168.3.43] => (item={'key': 'michael', 'value': {'name': 'michael xiang', 'phone': 123}}) => {
+    "msg": "User michael is michael xiang 123"
+}
+2019-03-02 15:34:26,121 p=53003 u=michael |  ok: [192.168.3.43] => (item={'key': 'qq', 'value': {'name': 'qq huang', 'phone': 456}}) => {
+    "msg": "User qq is qq huang 456"
+}
+2019-03-02 15:34:26,142 p=53003 u=michael |  TASK [install rpms] **********************************************************************************************************************
+2019-03-02 15:34:26,193 p=53003 u=michael |  ok: [192.168.3.43] => (item=httpd lrzsz vim git) => {
+    "msg": "Hello world!"
+}
+2019-03-02 15:34:26,195 p=53003 u=michael |  PLAY RECAP *******************************************************************************************************************************
+2019-03-02 15:34:26,195 p=53003 u=michael |  192.168.3.43               : ok=3    changed=0    unreachable=0    failed=0   
+2019-03-02 15:34:44,549 p=53050 u=michael |  PLAY [centos] ****************************************************************************************************************************
+2019-03-02 15:34:44,558 p=53050 u=michael |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-03-02 15:34:46,934 p=53050 u=michael |   [ERROR]: User interrupted execution
+
+2019-03-02 15:35:07,963 p=53109 u=michael |  PLAY [centos] ****************************************************************************************************************************
+2019-03-02 15:35:07,973 p=53109 u=michael |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-03-02 15:35:13,355 p=53109 u=michael |  ok: [192.168.3.43]
+2019-03-02 15:35:13,371 p=53109 u=michael |  TASK [print phone records] ***************************************************************************************************************
+2019-03-02 15:35:13,421 p=53109 u=michael |  ok: [192.168.3.43] => (item={'key': 'michael', 'value': {'name': 'michael xiang', 'phone': 123}}) => {
+    "msg": "User michael is michael xiang 123"
+}
+2019-03-02 15:35:13,424 p=53109 u=michael |  ok: [192.168.3.43] => (item={'key': 'qq', 'value': {'name': 'qq huang', 'phone': 456}}) => {
+    "msg": "User qq is qq huang 456"
+}
+2019-03-02 15:35:13,445 p=53109 u=michael |  TASK [install rpms] **********************************************************************************************************************
+2019-03-02 15:35:13,496 p=53109 u=michael |  ok: [192.168.3.43] => (item=httpd lrzsz vim git) => {
+    "msg": "httpd lrzsz vim git"
+}
+2019-03-02 15:35:13,499 p=53109 u=michael |  PLAY RECAP *******************************************************************************************************************************
+2019-03-02 15:35:13,499 p=53109 u=michael |  192.168.3.43               : ok=3    changed=0    unreachable=0    failed=0   
+2019-03-02 15:36:11,972 p=53204 u=michael |  PLAY [centos] ****************************************************************************************************************************
+2019-03-02 15:36:11,982 p=53204 u=michael |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-03-02 15:36:14,672 p=53204 u=michael |  ok: [192.168.3.43]
+2019-03-02 15:36:14,688 p=53204 u=michael |  TASK [print phone records] ***************************************************************************************************************
+2019-03-02 15:36:14,738 p=53204 u=michael |  ok: [192.168.3.43] => (item={'key': 'michael', 'value': {'name': 'michael xiang', 'phone': 123}}) => {
+    "msg": "User michael is michael xiang 123"
+}
+2019-03-02 15:36:14,741 p=53204 u=michael |  ok: [192.168.3.43] => (item={'key': 'qq', 'value': {'name': 'qq huang', 'phone': 456}}) => {
+    "msg": "User qq is qq huang 456"
+}
+2019-03-02 15:36:14,762 p=53204 u=michael |  TASK [install rpms] **********************************************************************************************************************
+2019-03-02 15:36:14,815 p=53204 u=michael |  ok: [192.168.3.43] => (item=httpd) => {
+    "msg": "httpd"
+}
+2019-03-02 15:36:14,817 p=53204 u=michael |  ok: [192.168.3.43] => (item=lrzsz) => {
+    "msg": "lrzsz"
+}
+2019-03-02 15:36:14,821 p=53204 u=michael |  ok: [192.168.3.43] => (item=vim) => {
+    "msg": "vim"
+}
+2019-03-02 15:36:14,824 p=53204 u=michael |  ok: [192.168.3.43] => (item=git) => {
+    "msg": "git"
+}
+2019-03-02 15:36:14,830 p=53204 u=michael |  PLAY RECAP *******************************************************************************************************************************
+2019-03-02 15:36:14,830 p=53204 u=michael |  192.168.3.43               : ok=3    changed=0    unreachable=0    failed=0   

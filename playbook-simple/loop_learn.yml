@@ -1,0 +1,25 @@
+---
+- hosts: centos
+  vars:
+    users:
+      michael:
+        name: michael xiang
+        phone: 123
+      qq:
+        name: qq huang
+        phone: 456
+
+    rpms:
+        - httpd
+        - lrzsz
+        - vim
+        - git
+
+  tasks:
+    - name: print phone records
+      debug: msg="User {{item.key }} is {{ item.value.name }} {{item.value.phone}}"
+      with_dict: "{{ users }}"
+
+    - name: install rpms
+      yum: name="{{item}}" state=installed
+      with_items: "{{rpms}}"

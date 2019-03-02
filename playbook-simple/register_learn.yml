@@ -1,0 +1,15 @@
+---
+- hosts: centos
+  tasks:
+      - name: ls /tmp
+        shell: ls -l /tmp
+        register: result
+        ignore_errors: True
+     
+      - name: echo result when rc==5
+        shell: echo "{{result}}"
+        when: result.rc == 5
+
+      - name: debug show stdout
+        debug:
+          msg: "{{result.stdout}}"
