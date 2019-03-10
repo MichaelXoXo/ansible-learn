@@ -1,0 +1,13 @@
+2019-03-09 21:40:56,215 p=44758 u=michael |   [ERROR]: User interrupted execution
+
+2019-03-09 21:41:02,296 p=44775 u=michael |   [WARNING]: - the configured path /Users/michael/.ansible/roles does not exist.
+
+2019-03-09 21:41:02,296 p=44775 u=michael |   [WARNING]: - the configured path /usr/share/ansible/roles does not exist.
+
+2019-03-09 21:41:02,296 p=44775 u=michael |   [WARNING]: - the configured path /etc/ansible/roles does not exist.
+
+2019-03-09 21:41:02,297 p=44775 u=michael |  ERROR! - None of the provided paths was usable. Please specify a valid path with --roles-path
+2019-03-09 21:43:51,880 p=44796 u=michael |   [WARNING]: - bennojoy.mysql was NOT installed successfully: Failed to get data from the API server
+(https://galaxy.ansible.com/api/): Failed to connect to galaxy.ansible.com at port 443: [Errno 60] Operation timed out
+
+2019-03-09 21:43:51,882 p=44796 u=michael |  ERROR! - you can use --ignore-errors to skip failed roles and finish processing the list.

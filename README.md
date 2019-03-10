@@ -25,3 +25,22 @@ ansible all -m shell -a "cat /var/www/html/index.html"
 cd playbook-simple
 ansible-playbook loop_learn.yml
 ```
+
+## ansible-own
+
+该目录存放一下自己写的一些 playbook
+
+### mysql
+
+该目录下放了自己安装 mysql 的脚本，运行命令：
+
+```
+cd ansible-own/mysql
+ansible-playbook site.yml --list-hosts
+ansible-playbook site.yml --list-tasks
+ansible-playbook site.yml
+```
+
+`mysql_master_remove` 谨慎执行该 task，原来机器上有 MySQL 的话，可能会造成数据丢失。
+
+脚本会自动安装 mysql-5.7，并将数据存储路径设置为 `/data/mysql`的目录下。
