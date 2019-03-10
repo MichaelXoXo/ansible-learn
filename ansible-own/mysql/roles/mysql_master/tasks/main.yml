@@ -1,0 +1,107 @@
+---
+# This Playbook runs all the common plays in the deployment
+- name: Debug vars
+  debug: msg="Author:{{ author }}"
+
+# 这里的 src 的目录，它会自动从 files 中寻找
+# - name: create mysql tmp dir
+#   file:
+#    path: /tmp/mysql_rpm
+#    state: directory
+#    mode: 0755
+
+# - name: copy mysql repo rpm to /tmp/mysql
+#   copy:
+#     src: mysql80-community-release-el7-2.noarch.rpm
+#     dest: /tmp/mysql/mysql80-community-release-el7-2.noarch.rpm
+#     owner: root
+#     group: root
+
+# - name: install mysql repo
+#   yum:
+#     name: /tmp/mysql/mysql80-community-release-el7-2.noarch.rpm
+#     state: present
+
+# 利用 yum 在线安装，可以不用拷贝 repo 去主机，替换上上面拷贝 repo 文件的方式
+# - name: Install mysql repo from url
+#   yum:
+#     name: https://repo.mysql.com//mysql80-community-release-el7-2.noarch.rpm
+
+# - name: Install mysql57-community
+#   yum:
+#     name: mysql-community-server-5.7.25
+#     disablerepo: mysql80-community
+#     enablerepo: mysql57-community
+#     state: present
+#   register: install_mysql57
+
+# - name: Debug install_mysql57
+#   debug:
+#     var: install_mysql57
+
+# # # 安装之后，要启动，才能去修改密码
+# - name: Start the MySQL service
+#   service: name=mysqld state=started enabled=true
+
+# # # creates ：a filename, when it already exists, this step will not be run
+# # # https://docs.ansible.com/ansible/latest/modules/shell_module.html#shell-module
+# # # https://stackoverflow.com/questions/38523192/vagrant-ansible-centos-7-how-to-install-mysql-5-7-and-change-default-password
+# - name: Change mysql root password and track in
+#   shell: |
+#     password_match=`awk '/A temporary password is generated for/ {a=$0} END{ print a }' /var/log/mysqld.log | awk '{print $(NF)}'`
+#     echo $password_match
+#     mysql -uroot -p$password_match --connect-expired-password -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '{{ root_password }}';flush privileges;"
+#     echo "[client] user=root password='{{ root_password }}'" > /root/.my.cnf
+#   args:
+#     creates: /root/.my.cnf
+#   register: change_temp_pass
+#   notify: restart mysqld
+
+# - meta: flush_handlers
+
+# - debug:
+#    var: change_temp_pass
+
+# # # https://qizhanming.com/blog/2017/05/10/centos-7-yum-install-mysql-57
+# - name: Add remote user
+#   shell: |
+#     export MYSQL_PWD="{{ root_password }}"
+#     mysql -uroot -e "CREATE USER   '{{ new_user }}'@'%' identified by '{{ new_user_password }}'; GRANT ALL PRIVILEGES ON *.* TO '{{ new_user }}'@'%' IDENTIFIED BY '{{ new_user_password }}' WITH GRANT OPTION; flush privileges;"
+#     echo "new_user={{ new_user }} new_user_password={{ new_user_password }}" > /root/.my.new.cnf
+#   register: add_new_user
+
+# - name: Debug add_new_user
+#   debug:
+#     var: add_new_user
+
+# - name: Create Mysql Data Dir
+#   file:
+#     path: "{{ item }}"
+#     state: directory
+#     owner: mysql
+#     group: mysql
+#   with_items:
+#     - "{{ mysql_data_dir }}"
+#     - "{{ mysql_log_dir }}"
+
+# - name: Stop mysqld service
+#   service:
+#     name: mysqld
+#     state: stopped
+
+# - name: Copy old mysql data
+#   shell: rsync -av /var/lib/mysql/ "{{ mysql_data_dir}}"
+
+# - name: Create Mysql configuration file
+#   template:
+#     src: my.cnf.j2
+#     dest: /etc/my.cnf
+#     mode: 0644
+#     backup: yes
+#   notify:
+#   - restart mysqld
+
+- name: test service stop
+  service:
+    name: mysqld
+    state: restarted

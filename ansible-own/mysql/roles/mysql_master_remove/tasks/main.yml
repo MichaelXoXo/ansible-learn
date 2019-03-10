@@ -1,0 +1,39 @@
+---
+# This Playbook runs all the common plays in the deployment
+- name: Remove Mysql RPMS
+  yum:
+    name: "{{ packages }}"
+    state: absent
+  vars:
+    packages:
+      - mysql-community-libs
+      - mysql-community-server
+      - mysql-community-client
+      - mysql-community-common
+
+
+# 会根据 .my.cnf 文件，决定需不需要重改密码
+- name: Remove /root/.my.cnf
+  file:
+    path: /root/.my.cnf
+    state: absent
+
+# 这个会直接删除 mysql 目录
+# 避免如下问题
+# https://stackoverflow.com/questions/50469060/mysqld-service-wont-start
+# https://www.jianshu.com/p/7af95b08b954
+- name: Delete previous data
+  file:
+    path: "{{ mysql_top_dir }}"
+    state: absent
+
+# 谨慎执行该 task，原来机器上有 MySQL 的话，可能会造成数据丢失
+# - name: Delete default data
+#   file:
+#     path: /var/lib/mysql
+#     state: absent
+
+- name: Delete default log
+  file:
+    path: /var/log/mysqld.log
+    state: absent

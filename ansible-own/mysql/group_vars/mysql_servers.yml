@@ -1,0 +1,11 @@
+---
+author: MichelXiang
+root_password: Home123*
+new_user: cicd
+new_user_password: Home123*
+mysql_top_dir: /data/mysql
+mysql_data_dir: /data/mysql/data
+mysql_log_dir: /data/mysql/log
+mysql_socket_file: /data/mysql/mysql.sock
+mysql_pid_file: /data/mysql/mysql.pid
+mysql_log_error_file: /data/mysql/log/mysqld.log

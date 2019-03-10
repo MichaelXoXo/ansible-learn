@@ -1,0 +1,11 @@
+---
+- hosts: mysql_master
+  vars:
+    http_port: 3036
+  vars_files:
+    - ./group_vars/mysql_servers.yml
+  remote_user: root
+  gather_facts: no
+  roles:
+    # - mysql_master_remove
+    - mysql_master
